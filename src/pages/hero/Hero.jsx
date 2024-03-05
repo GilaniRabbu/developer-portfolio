@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Player } from "@lottiefiles/react-lottie-player";
-import heroAnimation from "./hero.json";
+import HeroAnimation from "./hero-animation.json";
 
 const textVariants = {
   initial: {
@@ -118,7 +118,7 @@ const Hero = () => {
             animate="animate"
           >
             <Player
-              src={heroAnimation}
+              src={HeroAnimation}
               className="m-auto lg:max-w-[500px] md:max-w-[400px] sm:max-w-80 max-w-[250px]"
               loop
               autoplay

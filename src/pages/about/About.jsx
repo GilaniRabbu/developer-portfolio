@@ -1,6 +1,6 @@
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import aboutAnimation from "./about.json";
+import AboutAnimation from "./about-animation.json";
 
 const AboutPage = () => {
   return (
@@ -9,7 +9,7 @@ const AboutPage = () => {
         <div className="flex items-center flex-col md:flex-row">
           <div className="md:w-1/2 w-full">
             <Player
-              src={aboutAnimation}
+              src={AboutAnimation}
               className="m-auto lg:max-w-[500px] md:max-w-[400px] sm:max-w-80 max-w-[250px]"
               loop
               autoplay
