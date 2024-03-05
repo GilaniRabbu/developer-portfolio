@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Player } from "@lottiefiles/react-lottie-player";
+import heroAnimation from "./hero.json";
 
 const textVariants = {
   initial: {
@@ -60,9 +61,6 @@ const Hero = () => {
               technologies and best practices, with a dedication to continuous
               learning and improvement.
             </motion.p>
-            {/* I'm a web developer from Dhaka. Learning more about coding is not
-            just a personal interest, but a necessary step in achieving my
-            career goals and aspirations. */}
             <motion.div
               variants={textVariants}
               className="flex gap-4 flex-wrap my-5 justify-center md:justify-start"
@@ -120,7 +118,7 @@ const Hero = () => {
             animate="animate"
           >
             <Player
-              src="https://lottie.host/62cee1ec-402f-4520-afee-7b14b9eb2052/rnRyo1xb2j.json"
+              src={heroAnimation}
               className="m-auto lg:max-w-[500px] md:max-w-[400px] sm:max-w-80 max-w-[250px]"
               loop
               autoplay
