@@ -39,31 +39,36 @@ const skill = [
   },
   {
     id: 8,
+    img: "./php.png",
+    title: "PHP",
+  },
+  {
+    id: 9,
     img: "./git.svg",
     title: "Git",
   },
   {
-    id: 9,
+    id: 10,
     img: "./github.svg",
     title: "Github",
   },
   {
-    id: 10,
+    id: 11,
     img: "./firebase.svg",
     title: "Firebase",
   },
   {
-    id: 11,
+    id: 12,
     img: "./npm.svg",
     title: "npm",
   },
   {
-    id: 12,
+    id: 13,
     img: "./vs-code.png",
     title: "VS Code",
   },
   {
-    id: 13,
+    id: 14,
     img: "./netlify.svg",
     title: "Netlify",
   },
@@ -93,7 +98,7 @@ const SkillPage = () => {
         <h2 className="font-bold font-serif text-4xl text-center mb-10 p-2 md:p-0">
           My Skills & Tools
         </h2>
-        <div className="flex gap-5 justify-center items-center flex-wrap flex-col md:flex-row">
+        <div className="flex gap-5 justify-center items-center flex-wrap flex-row">
           {skill.map((item) => (
             <Skill item={item} key={item.id} />
           ))}
