@@ -8,7 +8,7 @@ const FooterPage = () => {
         <motion.a
           href="https://www.facebook.com/GilaniRabbu"
           target="_blank"
-          whileHover={{ scale: 1.07 }}
+          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 24 24">
@@ -21,7 +21,7 @@ const FooterPage = () => {
         <motion.a
           href="https://www.twitch.tv/gilanirabbu"
           target="_blank"
-          whileHover={{ scale: 1.07 }}
+          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 24 24">
@@ -34,7 +34,7 @@ const FooterPage = () => {
         <motion.a
           href="https://twitter.com/GilaniRabbu"
           target="_blank"
-          whileHover={{ scale: 1.07 }}
+          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 448 512">
@@ -47,7 +47,7 @@ const FooterPage = () => {
         <motion.a
           href="https://t.me/GilaniRabbu"
           target="_blank"
-          whileHover={{ scale: 1.07 }}
+          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ const FooterPage = () => {
         <motion.a
           href="https://codepen.io/GilaniRabbu"
           target="_blank"
-          whileHover={{ scale: 1.07 }}
+          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 256 256">
