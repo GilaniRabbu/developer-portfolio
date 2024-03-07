@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 import { Player } from "@lottiefiles/react-lottie-player";
 import HeroAnimation from "./hero-animation.json";
 
@@ -46,9 +47,15 @@ const Hero = () => {
           >
             <motion.h2
               variants={textVariants}
-              className="tracking-widest uppercase p-2 inline-block text-3xl text-zinc-100 bg-zinc-950 dark:text-zinc-950 dark:bg-zinc-100"
+              className="text-xl sm:text-4xl font-bold tracking-widest"
             >
-              Toufiq Gilani Rabbu
+              <Typewriter
+                options={{
+                  strings: ["TOUFIQ GILANI RABBU", "BBA", "MBA", "TYPEWRITER"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </motion.h2>
             <motion.h1
               variants={textVariants}
@@ -67,12 +74,16 @@ const Hero = () => {
             >
               <motion.button
                 variants={textVariants}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.94 }}
                 className="font-semibold tracking-widest px-5 py-3 rounded-md cursor-pointer inline-block bg-zinc-950 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-950"
               >
                 Resume
               </motion.button>
               <motion.button
                 variants={textVariants}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.94 }}
                 className="font-semibold tracking-widest px-5 py-3 rounded-md cursor-pointer inline-block bg-zinc-950 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-950"
               >
                 Contact Me
