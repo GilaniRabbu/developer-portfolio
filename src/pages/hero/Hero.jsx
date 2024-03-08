@@ -51,7 +51,7 @@ const Hero = () => {
             >
               <Typewriter
                 options={{
-                  strings: ["TOUFIQ GILANI RABBU", "BBA", "MBA", "TYPEWRITER"],
+                  strings: ["TOUFIQ GILANI RABBU"],
                   autoStart: true,
                   loop: true,
                 }}
