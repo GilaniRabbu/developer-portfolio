@@ -27,7 +27,14 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const items = ["Homepage", "About", "Skills", "Portfolio", "Contact"];
+  const items = [
+    "Homepage",
+    "About",
+    "Skills",
+    "Portfolio",
+    "Testimonial",
+    "Contact",
+  ];
 
   return (
     <motion.div
