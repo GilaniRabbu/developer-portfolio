@@ -45,9 +45,11 @@ const Testimonial = () => {
             alt="Quote Symbol"
           />
           <p className="italic max-w-xl mx-auto px-3 mb-12 text-gray-500 dark:text-gray-300">
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-            vero eros et accumsan et iusto odio dignissim qui blandit praesent
+            Gilani mastered CSS and responsive web design, earning
+            the <span className="text-[#00BC91]">
+              Conquering Responsive Layouts
+            </span> certificate.
+            Their proficiency and commitment are outstanding.
           </p>
         </SwiperSlide>
         <SwiperSlide className="text-center flex flex-col items-center justify-center">
@@ -65,9 +67,8 @@ const Testimonial = () => {
             alt="Quote Symbol"
           />
           <p className="italic max-w-xl mx-auto px-3 mb-12 text-gray-500 dark:text-gray-300">
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-            vero eros et accumsan et iusto odio dignissim qui blandit praesent
+            Gilani has shown exceptional skill in HTML, CSS, JavaScript, and
+            jQuery. Their dedication and creativity are truly impressive.
           </p>
         </SwiperSlide>
         <SwiperSlide className="text-center flex flex-col items-center justify-center">
@@ -85,9 +86,8 @@ const Testimonial = () => {
             alt="Quote Symbol"
           />
           <p className="italic max-w-xl mx-auto px-3 mb-12 text-gray-500 dark:text-gray-300">
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-            vero eros et accumsan et iusto odio dignissim qui blandit praesent
+            Gilani excelled in learning JavaScript, ES6, and React. Their
+            dedication and skill in these technologies are truly commendable.
           </p>
         </SwiperSlide>
       </Swiper>
