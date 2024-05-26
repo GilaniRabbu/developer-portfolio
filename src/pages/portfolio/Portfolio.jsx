@@ -11,7 +11,7 @@ const items = [
   {
     id: 1,
     title: "Advice Generator App",
-    img: "https://github.com/GilaniRabbu/advice-generator-app/blob/main/design/desktop-preview.jpg?raw=true",
+    img: "./portfolio-01.jpg",
     desc: "The perfect project if you're learning how to interact with 3rd-party APIs. This challenge uses the Advice Slip API to generate random quotes of advice.",
     live: "https://gilani-ra-advice-generator.netlify.app/",
     git: "https://github.com/GilaniRabbu/advice-generator-app.git",
@@ -19,17 +19,17 @@ const items = [
   },
   {
     id: 2,
-    title: "Interactive Rating Component",
-    img: "https://github.com/GilaniRabbu/interactive-rating-component-solutions/blob/main/design/desktop-preview.jpg?raw=true",
-    desc: "This is a nice, small project to practice handling user interactions and updating the DOM. Perfect for anyone who has learned the basics of JavaScript!",
-    live: "https://gilani-ra-blog-011.netlify.app/",
-    git: "https://github.com/GilaniRabbu/interactive-rating-component-solutions.git",
-    tech: ["HTML", "CSS", "JavaScript"],
+    title: "NEXSOIT Landing Page",
+    img: "./portfolio-01.jpg",
+    desc: "Developed NEXSOIT's website with pages including Home, About, Services, Blog, and Contact, enhancing their online presence and client engagement.",
+    live: "https://nexsoit.netlify.app/",
+    git: "https://github.com/abdulkader789/nexsoit-client.git",
+    tech: ["HTML", "CSS", "React", "Tailwind CSS"],
   },
   {
     id: 3,
     title: "Article Preview Component",
-    img: "https://github.com/GilaniRabbu/article-preview-component-solution/blob/main/design/desktop-preview.jpg?raw=true",
+    img: "./portfolio-01.jpg",
     desc: "Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well.",
     live: "https://gilani-ra-blog-009.netlify.app/",
     git: "https://github.com/GilaniRabbu/article-preview-component-solution.git",
@@ -109,6 +109,7 @@ const Project = ({ item }) => {
     <div className="max-w-[350px] p-5 bg-zinc-300 dark:bg-zinc-800">
       <div className="mb-4 overflow-hidden">
         <motion.img
+          loading="lazy"
           src={item.img}
           alt="..."
           className="max-w-full cursor-pointer"
