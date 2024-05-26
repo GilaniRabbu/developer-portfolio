@@ -28,11 +28,11 @@ const items = [
   },
   {
     id: 3,
-    title: "Article Preview Component",
+    title: "Restaurant Website Responsive",
     img: "./portfolio-01.jpg",
-    desc: "Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well.",
-    live: "https://gilani-ra-blog-009.netlify.app/",
-    git: "https://github.com/GilaniRabbu/article-preview-component-solution.git",
+    desc: "Practice your layout skills with this restaurant website. There's lots of fun to be had playing around with animations for the sharing icons as well.",
+    live: "https://gilani-ra-tasty-food.netlify.app/",
+    git: "https://github.com/GilaniRabbu/restaurant-website-responsive-dark-theme.git",
     tech: ["HTML", "CSS", "JavaScript"],
   },
 ];
