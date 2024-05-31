@@ -54,7 +54,7 @@ const Testimonial = () => {
         </SwiperSlide>
         <SwiperSlide className="text-center flex flex-col items-center justify-center">
           <img
-            src="./client-02.png"
+            src="./client-02.jpg"
             className="object-cover w-[128px] block mx-auto rounded-full mb-8"
             alt="Profile Image"
           />
