@@ -4,8 +4,8 @@ import AboutAnimation from "./about-animation.json";
 
 const AboutPage = () => {
   return (
-    <div className="py-10 text-zinc-950 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-950">
-      <div className="m-auto max-w-screen-xl">
+    <div className="py-10 px-3 text-zinc-950 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-950">
+      <div className="m-auto max-w-screen-xl rounded-2xl bg-white/80 dark:bg-[#212223]">
         <div className="flex items-center flex-col md:flex-row">
           <div className="md:w-1/2 w-full">
             <Player
@@ -15,7 +15,7 @@ const AboutPage = () => {
               autoplay
             />
           </div>
-          <div className="p-3 w-full text-center md:w-1/2 md:text-left">
+          <div className="p-4 w-full text-center md:w-1/2 md:text-left">
             <h3 className="text-xl font-medium">Who Am I ?</h3>
             <h2 className="uppercase mt-2 text-4xl font-serif font-semibold text-indigo-700 dark:text-indigo-400">
               About me

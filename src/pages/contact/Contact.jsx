@@ -30,7 +30,7 @@ const ContactPage = () => {
 
   return (
     <div className="py-5 px-3 bg-zinc-100 dark:bg-zinc-950">
-      <div className="px-10 pt-10 pb-2 max-w-5xl mx-auto rounded-2xl bg-white/80 dark:bg-[#212223]">
+      <div className="px-10 pt-10 pb-2 max-w-6xl mx-auto rounded-2xl bg-white/80 dark:bg-[#212223]">
         <h2 className="font-bold font-serif text-center text-3xl md:text-4xl mb-5 text-indigo-700 dark:text-indigo-400">
           Contact Me.
         </h2>
@@ -132,7 +132,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg">PHONE</h3>
-                  <p className="text-sm">+880 1829 389 761</p>
+                  <p className="text-sm">+880 1635 047 933</p>
                 </div>
               </div>
             </div>
