@@ -11,7 +11,7 @@ const items = [
   {
     id: 1,
     title: "Advice Generator App",
-    img: "./portfolio-01.jpg",
+    img: "./portfolio-01.png",
     desc: "The perfect project if you're learning how to interact with 3rd-party APIs. This challenge uses the Advice Slip API to generate random quotes of advice.",
     live: "https://gilani-ra-advice-generator.netlify.app/",
     git: "https://github.com/GilaniRabbu/advice-generator-app.git",
@@ -20,7 +20,7 @@ const items = [
   {
     id: 2,
     title: "NEXSOIT Landing Page",
-    img: "./portfolio-01.jpg",
+    img: "./portfolio-01.png",
     desc: "Developed NEXSOIT's website with pages including Home, About, Services, Blog, and Contact, enhancing their online presence and client engagement.",
     live: "https://nexsoit.netlify.app/",
     git: "https://github.com/abdulkader789/nexsoit-client.git",
@@ -29,7 +29,7 @@ const items = [
   {
     id: 3,
     title: "Restaurant Website Responsive",
-    img: "./portfolio-01.jpg",
+    img: "./portfolio-01.png",
     desc: "Practice your layout skills with this restaurant website. There's lots of fun to be had playing around with animations for the sharing icons as well.",
     live: "https://gilani-ra-tasty-food.netlify.app/",
     git: "https://github.com/GilaniRabbu/restaurant-website-responsive-dark-theme.git",
