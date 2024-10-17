@@ -4,8 +4,8 @@ import AboutAnimation from "./about-animation.json";
 
 const AboutPage = () => {
   return (
-    <div className="py-10 px-3 text-zinc-950 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-950">
-      <div className="m-auto max-w-screen-xl rounded-2xl bg-white/80 dark:bg-[#212223]">
+    <div className="py-10 text-zinc-950 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-950">
+      <div className="m-auto max-w-screen-xl">
         <div className="flex items-center flex-col md:flex-row">
           <div className="md:w-1/2 w-full">
             <Player
@@ -25,10 +25,12 @@ const AboutPage = () => {
               <span className="text-emerald-700 dark:text-emerald-400 font-semibold">
                 Toufiq Gilani Rabbu
               </span>{" "}
-              and i am from Dhaka, Bangladesh. Available for all stages of the
-              development cycle for dynamic web projects. Having an in-depth
-              knowledge including advanced HTML5, CSS3, JavaScript, jQuery.
-              Strong background in management and leadership.
+              and i am from Dhaka, Bangladesh. Aspiring MERN Stack Developer
+              eager to contribute to impactful projects using React.js, Node.js,
+              Express.js and MongoDB. Skilled in building dynamic web
+              applications with clean code and user-friendly interfaces.
+              Committed to continuous learning and staying updated with the
+              latest industry trends.
             </p>
             <p className="mt-5 text-lg font-medium">
               I love to create original projects with beautiful designs, you can

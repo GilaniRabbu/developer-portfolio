@@ -5,12 +5,12 @@ const skill = [
   {
     id: 1,
     img: "./html.png",
-    title: "HTML",
+    title: "HTML5",
   },
   {
     id: 2,
     img: "./css.png",
-    title: "CSS",
+    title: "CSS3",
   },
   {
     id: 3,
@@ -39,38 +39,63 @@ const skill = [
   },
   {
     id: 8,
+    img: "./next.svg",
+    title: "Next JS",
+  },
+  {
+    id: 9,
+    img: "./node.svg",
+    title: "Node JS",
+  },
+  {
+    id: 10,
+    img: "./express.svg",
+    title: "Express JS",
+  },
+  {
+    id: 11,
+    img: "./mongodb.svg",
+    title: "MongoDB",
+  },
+  {
+    id: 12,
     img: "./php.png",
     title: "PHP",
   },
   {
-    id: 9,
+    id: 13,
     img: "./git.svg",
     title: "Git",
   },
   {
-    id: 10,
+    id: 14,
     img: "./github.svg",
     title: "Github",
   },
   {
-    id: 11,
+    id: 15,
     img: "./firebase.svg",
     title: "Firebase",
   },
   {
-    id: 12,
+    id: 16,
     img: "./npm.svg",
     title: "npm",
   },
   {
-    id: 13,
+    id: 17,
     img: "./vs-code.png",
     title: "VS Code",
   },
   {
-    id: 14,
+    id: 18,
     img: "./netlify.svg",
     title: "Netlify",
+  },
+  {
+    id: 19,
+    img: "./vercel.svg",
+    title: "Vercel",
   },
 ];
 

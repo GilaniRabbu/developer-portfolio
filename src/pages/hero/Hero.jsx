@@ -49,23 +49,23 @@ const Hero = () => {
               variants={textVariants}
               className="text-xl sm:text-4xl font-bold tracking-widest"
             >
+              TOUFIQ GILANI RABBU
+            </motion.h2>
+            <motion.h1
+              variants={textVariants}
+              className="uppercase font-bold my-4 text-3xl md:text-5xl lg:text-6xl"
+            >
               <Typewriter
                 options={{
-                  strings: ["TOUFIQ GILANI RABBU"],
+                  strings: ["Web Developer", "MERN Developer"],
                   autoStart: true,
                   loop: true,
                 }}
               />
-            </motion.h2>
-            <motion.h1
-              variants={textVariants}
-              className="uppercase my-4 text-3xl md:text-6xl lg:text-7xl"
-            >
-              Web Developer
             </motion.h1>
             <motion.p variants={textVariants} className="md:w-4/5 w-full">
-              I am a web developer from Dhaka. Strong understanding of modern
-              web technologies and best practices, with a dedication to
+              I am a MERN Stack Developer from Dhaka. Strong understanding of
+              modern web technologies and best practices, with a dedication to
               continuous learning and improvement.
             </motion.p>
             <motion.div
@@ -96,7 +96,7 @@ const Hero = () => {
               <motion.a
                 href="https://github.com/GilaniRabbu"
                 target="_blank"
-                whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+                whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <svg width="25" height="25" viewBox="0 0 496 512">
@@ -109,7 +109,7 @@ const Hero = () => {
               <motion.a
                 href="https://codepen.io/GilaniRabbu"
                 target="_blank"
-                whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+                whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <svg width="25" height="25" viewBox="0 0 256 256">
@@ -122,7 +122,7 @@ const Hero = () => {
               <motion.a
                 href="https://dev.to/gilanirabbu"
                 target="_blank"
-                whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+                whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <svg width="25" height="25" viewBox="0 0 448 512">

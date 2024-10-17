@@ -32,12 +32,12 @@ const Testimonial = () => {
       >
         <SwiperSlide className="text-center flex flex-col items-center justify-center">
           <img
-            src="./client-01.png"
+            src="./client.jpg"
             className="object-cover w-[128px] block mx-auto rounded-full mb-8"
             alt="Profile Image"
           />
           <h3 className="uppercase text-2xl font-bold font-serif">
-            Kevin Powell
+            Testimonial Title
           </h3>
           <img
             src="./quote.png"
@@ -45,21 +45,18 @@ const Testimonial = () => {
             alt="Quote Symbol"
           />
           <p className="italic max-w-xl mx-auto px-3 mb-12 text-gray-500 dark:text-gray-300">
-            Gilani mastered CSS and responsive web design, earning
-            the <span className="text-[#00BC91]">
-              Conquering Responsive Layouts
-            </span> certificate.
-            Their proficiency and commitment are outstanding.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam
+            aliquam ipsam aut necse officia sint, nisi des vitae neq ilo.
           </p>
         </SwiperSlide>
         <SwiperSlide className="text-center flex flex-col items-center justify-center">
           <img
-            src="./client-02.jpg"
+            src="./client.jpg"
             className="object-cover w-[128px] block mx-auto rounded-full mb-8"
             alt="Profile Image"
           />
           <h3 className="uppercase text-2xl font-bold font-serif">
-            Anisul Islam
+            Testimonial Title
           </h3>
           <img
             src="./quote.png"
@@ -67,18 +64,18 @@ const Testimonial = () => {
             alt="Quote Symbol"
           />
           <p className="italic max-w-xl mx-auto px-3 mb-12 text-gray-500 dark:text-gray-300">
-            Gilani has shown exceptional skill in HTML, CSS, JavaScript, and
-            jQuery. Their dedication and creativity are truly impressive.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam
+            aliquam ipsam aut necse officia sint, nisi des vitae neq ilo.
           </p>
         </SwiperSlide>
         <SwiperSlide className="text-center flex flex-col items-center justify-center">
           <img
-            src="./client-03.jpg"
+            src="./client.jpg"
             className="object-cover w-[128px] block mx-auto rounded-full mb-8"
             alt="Profile Image"
           />
           <h3 className="uppercase text-2xl font-bold font-serif">
-            Rabbil Hasan
+            Testimonial Title
           </h3>
           <img
             src="./quote.png"
@@ -86,8 +83,8 @@ const Testimonial = () => {
             alt="Quote Symbol"
           />
           <p className="italic max-w-xl mx-auto px-3 mb-12 text-gray-500 dark:text-gray-300">
-            Gilani excelled in learning JavaScript, ES6, and React. Their
-            dedication and skill in these technologies are truly commendable.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam
+            aliquam ipsam aut necse officia sint, nisi des vitae neq ilo.
           </p>
         </SwiperSlide>
       </Swiper>

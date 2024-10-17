@@ -8,7 +8,7 @@ const FooterPage = () => {
         <motion.a
           href="https://www.facebook.com/GilaniRabbu"
           target="_blank"
-          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 448 512">
@@ -19,22 +19,9 @@ const FooterPage = () => {
           </svg>
         </motion.a>
         <motion.a
-          href="https://t.me/GilaniRabbu"
-          target="_blank"
-          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <svg width="32" height="32" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"
-            />
-          </svg>
-        </motion.a>
-        <motion.a
           href="https://www.linkedin.com/in/toufiq-gilani-rabbu/"
           target="_blank"
-          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 448 512">
@@ -45,22 +32,9 @@ const FooterPage = () => {
           </svg>
         </motion.a>
         <motion.a
-          href="https://codepen.io/GilaniRabbu"
-          target="_blank"
-          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <svg width="32" height="32" viewBox="0 0 256 256">
-            <path
-              fill="currentColor"
-              d="m235.79 89l-104-56a8 8 0 0 0-7.58 0l-104 56A8 8 0 0 0 16 96v64a8 8 0 0 0 4.21 7.05l104 56a8 8 0 0 0 7.58 0l104-56A8 8 0 0 0 240 160V96a8 8 0 0 0-4.21-7M224 146.61L189.45 128L224 109.39Zm-51.43-27.7L136 99.22V53.39L215.13 96Zm-44.57 24L100.3 128l27.7-14.91L155.7 128Zm-8-89.52v45.83l-36.57 19.69L40.87 96Zm-88 56L66.55 128L32 146.61Zm51.43 27.7L120 156.78v45.83L40.87 160ZM136 202.61v-45.83l36.57-19.69L215.13 160Z"
-            />
-          </svg>
-        </motion.a>
-        <motion.a
           href="https://twitter.com/GilaniRabbu"
           target="_blank"
-          whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.95 }}
         >
           <svg width="32" height="32" viewBox="0 0 448 512">

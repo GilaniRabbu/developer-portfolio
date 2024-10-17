@@ -8,9 +8,9 @@ const Navbar = () => {
     <div className="h-[100px] text-zinc-950 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-950">
       <Sidebar />
       <ThemeSwitcher />
-      <div className="max-w-7xl h-full flex justify-center items-center m-auto px-4">
+      <div className="max-w-screen-xl h-full flex justify-center items-center m-auto px-4">
         <motion.div
-          className="flex gap-3"
+          className="flex gap-3 py-2 px-5 rounded-full border border-zinc-950 dark:border-zinc-100"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
@@ -18,7 +18,7 @@ const Navbar = () => {
           <motion.a
             href="https://www.facebook.com/GilaniRabbu"
             target="_blank"
-            whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+            whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 0.95 }}
           >
             <svg width="25" height="25" viewBox="0 0 448 512">
@@ -31,7 +31,7 @@ const Navbar = () => {
           <motion.a
             href="https://twitter.com/GilaniRabbu"
             target="_blank"
-            whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+            whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 0.95 }}
           >
             <svg width="25" height="25" viewBox="0 0 448 512">
@@ -44,7 +44,7 @@ const Navbar = () => {
           <motion.a
             href="https://www.linkedin.com/in/toufiq-gilani-rabbu/"
             target="_blank"
-            whileHover={{ scale: 1.3, rotate: 360, skew: 5 }}
+            whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 0.95 }}
           >
             <svg width="25" height="25" viewBox="0 0 448 512">

@@ -10,30 +10,30 @@ import PropTypes from "prop-types";
 const items = [
   {
     id: 1,
-    title: "Advice Generator App",
+    title: "Agency Website",
     img: "./portfolio-01.png",
-    desc: "The perfect project if you're learning how to interact with 3rd-party APIs. This challenge uses the Advice Slip API to generate random quotes of advice.",
-    live: "https://gilani-ra-advice-generator.netlify.app/",
-    git: "https://github.com/GilaniRabbu/advice-generator-app.git",
+    desc: "Lorem ipsum dolor sit ame consectetur elite Ad quam asp ve provident aqu id se ui.",
+    live: "https://vercel.com",
+    git: "https://github.com/GilaniRabbu",
     tech: ["HTML", "CSS", "JavaScript", "API"],
   },
   {
     id: 2,
-    title: "NEXSOIT Landing Page",
+    title: "Landing Page",
     img: "./portfolio-01.png",
-    desc: "Developed NEXSOIT's website with pages including Home, About, Services, Blog, and Contact, enhancing their online presence and client engagement.",
-    live: "https://nexsoit.netlify.app/",
-    git: "https://github.com/abdulkader789/nexsoit-client.git",
-    tech: ["HTML", "CSS", "React", "Tailwind CSS"],
+    desc: "Lorem ipsum dolor sit ame consectetur elite Ad quam asp ve provident aqu id se ui.",
+    live: "https://vercel.com",
+    git: "https://github.com/GilaniRabbu",
+    tech: ["HTML", "CSS", "React.js", "Tailwind CSS"],
   },
   {
     id: 3,
-    title: "Restaurant Website Responsive",
+    title: "Portfolio Website",
     img: "./portfolio-01.png",
-    desc: "Practice your layout skills with this restaurant website. There's lots of fun to be had playing around with animations for the sharing icons as well.",
-    live: "https://gilani-ra-tasty-food.netlify.app/",
-    git: "https://github.com/GilaniRabbu/restaurant-website-responsive-dark-theme.git",
-    tech: ["HTML", "CSS", "JavaScript"],
+    desc: "Lorem ipsum dolor sit ame consectetur elite Ad quam asp ve provident aqu id se ui.",
+    live: "https://vercel.com",
+    git: "https://github.com/GilaniRabbu",
+    tech: ["HTML", "CSS", "JavaScript", "React.js", "Next.js"],
   },
 ];
 
@@ -92,9 +92,6 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     "&.Mui-selected": {
       color: "currentColor",
     },
-    "&.Mui-focusVisible": {
-      backgroundColor: "rgba(140, 240, 190, 0.5)",
-    },
   })
 );
 
@@ -117,7 +114,7 @@ const Project = ({ item }) => {
         />
       </div>
       <Box sx={{ width: "100%" }}>
-        <Box sx={{ bgcolor: "#A1A1AA" }}>
+        <Box sx={{ bgcolor: "#4682B4" }}>
           <StyledTabs
             value={value}
             onChange={handleChange}
@@ -132,12 +129,12 @@ const Project = ({ item }) => {
           <Box sx={{ p: 1 }} />
         </Box>
         <CustomTabPanel value={value} index={0} className="min-h-44">
-          <h3 className="text-2xl capitalize tracking-wider font-serif font-semibold text-emerald-800 dark:text-emerald-200">
+          <h3 className="text-2xl capitalize tracking-wider font-serif font-semibold text-sky-800 dark:text-sky-200">
             {item.title}
           </h3>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1} className="min-h-44">
-          <p className="font-serif tracking-wide text-emerald-800 dark:text-emerald-200">
+          <p className="font-serif tracking-wide text-sky-800 dark:text-sky-200">
             {item.desc}
           </p>
         </CustomTabPanel>
@@ -148,7 +145,7 @@ const Project = ({ item }) => {
                 key={index}
                 whileHover={{ scale: 1.07 }}
                 whileTap={{ scale: 1 }}
-                className="px-3 py-1 font-bold cursor-pointer text-sm rounded text-emerald-200 bg-emerald-700 dark:text-emerald-700 dark:bg-emerald-200"
+                className="px-3 py-1 font-bold cursor-pointer text-sm rounded text-sky-200 bg-sky-700 dark:text-sky-700 dark:bg-sky-200"
               >
                 {tech}
               </motion.li>
@@ -157,24 +154,20 @@ const Project = ({ item }) => {
         </CustomTabPanel>
       </Box>
       <div className="flex gap-1 flex-wrap mt-8">
-        <motion.a
+        <a
           href={item.live}
           target="_blank"
-          whileHover={{ scale: 1.07 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-4 py-2 text-sm font-semibold rounded-full cursor-pointer bg-transparent border-2 border-solid text-emerald-600 dark:text-emerald-400 border-emerald-600 dark:border-emerald-400"
+          className="px-4 py-2 text-sm font-semibold rounded-full cursor-pointer bg-transparent border-2 border-solid text-sky-600 dark:text-sky-400 border-sky-600 dark:border-sky-400"
         >
           Live Preview
-        </motion.a>
-        <motion.a
+        </a>
+        <a
           href={item.git}
           target="_blank"
-          whileHover={{ scale: 1.07 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-4 py-2 text-sm font-semibold rounded-full cursor-pointer bg-transparent border-2 border-solid text-emerald-600 dark:text-emerald-400 border-emerald-600 dark:border-emerald-400"
+          className="px-4 py-2 text-sm font-semibold rounded-full cursor-pointer bg-transparent border-2 border-solid text-sky-600 dark:text-sky-400 border-sky-600 dark:border-sky-400"
         >
           Check on Github
-        </motion.a>
+        </a>
       </div>
     </div>
   );
@@ -183,8 +176,8 @@ const Project = ({ item }) => {
 const PortfolioPage = () => {
   return (
     <div className="py-16 text-zinc-950 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-950">
-      <div className="max-w-7xl m-auto">
-        <h2 className="font-bold font-serif text-4xl text-center mb-10 p-2 md:p-0 text-emerald-700 dark:text-emerald-400">
+      <div className="max-w-screen-xl m-auto">
+        <h2 className="font-bold font-serif text-4xl text-center mb-10 p-2 md:p-0 text-sky-700 dark:text-sky-400">
           My Projects
         </h2>
         <div className="flex gap-5 justify-center items-center flex-row flex-wrap p-2">
