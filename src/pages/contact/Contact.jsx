@@ -98,7 +98,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex-1 font-bold">
                   <h3 className="text-xl">E-MAIL</h3>
-                  <p className="text-base">example@gmail.com</p>
+                  <p className="text-base">toufiqjilanirabbu7@gmail.com</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-5">
@@ -124,7 +124,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex-1 font-bold">
                   <h3 className="text-xl">PHONE</h3>
-                  <p className="text-base">+880 1234 567 891</p>
+                  <p className="text-base">+880 1635 047 933</p>
                 </div>
               </div>
             </div>

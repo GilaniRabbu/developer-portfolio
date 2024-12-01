@@ -5,7 +5,7 @@ import Hero from "./pages/hero/Hero";
 import AboutPage from "./pages/about/About";
 import SkillPage from "./pages/skill/Skill";
 import PortfolioPage from "./pages/portfolio/Portfolio";
-import Testimonial from "./pages/testimonial/Testimonial";
+// import Testimonial from "./pages/testimonial/Testimonial";
 import ContactPage from "./pages/contact/Contact";
 import FooterPage from "./pages/footer/Footer";
 import "./index.css";
@@ -27,9 +27,9 @@ const App = () => {
       <section id="Portfolio">
         <PortfolioPage />
       </section>
-      <section id="Testimonial">
+      {/* <section id="Testimonial">
         <Testimonial />
-      </section>
+      </section> */}
       <section id="Contact">
         <ContactPage />
       </section>
