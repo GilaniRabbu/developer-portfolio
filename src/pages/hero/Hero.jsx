@@ -72,14 +72,16 @@ const Hero = () => {
               variants={textVariants}
               className="flex gap-4 flex-wrap my-5 justify-center md:justify-start"
             >
-              <motion.button
+              <motion.a
                 variants={textVariants}
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.94 }}
+                href="/Gilani_Rabbu_MERN_Resume.pdf"
+                download="Gilani_Rabbu_MERN_Resume.pdf"
                 className="font-semibold tracking-widest px-5 py-3 rounded-md cursor-pointer inline-block bg-zinc-950 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-950"
               >
                 Resume
-              </motion.button>
+              </motion.a>
               <motion.button
                 variants={textVariants}
                 whileHover={{ scale: 1.06 }}
