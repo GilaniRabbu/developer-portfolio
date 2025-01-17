@@ -1,9 +1,9 @@
-import HomePage from "@/components/Home/HomePage";
+import LandingPage from "@/components/Home/Landing";
 
 export default function Home() {
   return (
     <main className="relative">
-      <HomePage />
+      <LandingPage />
     </main>
   );
 }

@@ -7,7 +7,7 @@ import ProjectShowcase from "@/components/Portfolio/Portfolio";
 import Skills from "@/components/Skills/Skills";
 import Timeline from "@/components/Timeline/Timeline";
 
-export default function HomePage() {
+export default function LandingPage() {
   return (
     <main>
       <Hero />
