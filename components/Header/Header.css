@@ -2,6 +2,7 @@
   padding: 1.25rem 1rem;
   position: relative;
   z-index: 9;
+  color: var(--tr-nav-text);
 }
 
 .header-area.header-absolute {
@@ -16,16 +17,12 @@
   background-color: var(--tr-nav-bg);
 }
 
-.text-nav {
-  color: var(--tr-nav-text);
-}
-
-.nav-links .text-nav-be {
+.nav-links .nav-link {
   position: relative;
   padding: 0.25rem 0;
 }
 
-.nav-links .text-nav-be::after {
+.nav-links .nav-link::after {
   content: "";
   position: absolute;
   width: 0;
@@ -36,7 +33,7 @@
   transition: width 0.3s ease;
 }
 
-.nav-links .text-nav-be:hover::after {
+.nav-links .nav-link:hover::after {
   width: 100%;
 }
 
@@ -44,7 +41,7 @@
   color: var(--tr-nav-text);
   width: 35px;
   height: 35px;
-  border: 1px solid var(--tr-nav-border);
+  border: 1px solid var(--tr-nav-text);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -63,7 +60,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--tr-nav-bg-hover);
+  background: var(--tr-nav-text);
   transform: scale(0);
   transition: all 0.3s ease;
   border-radius: 50%;
@@ -75,14 +72,14 @@
 }
 
 .nav-icon:hover {
-  color: var(--tr-nav-text-hover);
+  color: var(--tr-nav-bg);
   border: none;
 }
 
 .header-menu {
   position: fixed;
   left: 0;
-  top: 96px;
+  top: 104px;
   width: 100%;
   min-height: 90vh;
   color: var(--tr-nav-mobile-text);

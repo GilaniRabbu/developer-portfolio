@@ -17,7 +17,7 @@ const TapeSection = () => {
 
   return (
     <div className="py-16 lg:py-24 overflow-x-clip">
-      <div className="bg-gradient-to-r from bg-indigo-300 to-indigo-400 dark:bg-gradient-to-r from dark:bg-indigo-700 dark:to-indigo-800 text-gray-900 dark:text-white -rotate-3 -mx-1">
+      <div className="-rotate-3 -mx-1 bg-[#CBC9C9] dark:bg-[#383231]">
         <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex flex-none gap-4 pr-4 py-4 animate-move-left [animation-duration:30s]">
             {[...new Array(2)].fill(0).map((_, idx) => (

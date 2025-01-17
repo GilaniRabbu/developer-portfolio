@@ -48,22 +48,38 @@ export default function Header() {
   ];
 
   const socialLinks = [
-    { name: "Twitter", href: "#", icon: <FaXTwitter /> },
-    { name: "Facebook", href: "#", icon: <FaFacebookF /> },
-    { name: "LinkedIn", href: "#", icon: <FaLinkedinIn /> },
-    { name: "Github", href: "#", icon: <FaGithub /> },
+    {
+      name: "Twitter",
+      href: "https://x.com/GilaniRabbu",
+      icon: <FaXTwitter />,
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/GilaniRabbu",
+      icon: <FaFacebookF />,
+    },
+    {
+      name: "LinkedIn",
+      href: "http://www.linkedin.com/in/toufiq-gilani-rabbu",
+      icon: <FaLinkedinIn />,
+    },
+    {
+      name: "Github",
+      href: "https://github.com/GilaniRabbu",
+      icon: <FaGithub />,
+    },
   ];
 
   return (
     <header
       className={`header-area header-3 header-absolute ${
-        isScrolled ? "bg-header" : "bg-transparent"
+        isScrolled ? "bg-header shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto">
         <div className="flex">
           <div className="w-full flex flex-wrap justify-between items-center">
-            <div className="logo-box w-full max-w-[60px]">
+            <div className="w-full max-w-[60px]">
               <a href="#" className="inline-block">
                 <img src="./logo.png" alt="Admin Logo" className="w-full" />
               </a>
@@ -75,7 +91,7 @@ export default function Header() {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="text-nav no-underline text-nav-be"
+                    className="text-nav no-underline nav-link"
                   >
                     {link.name}
                   </a>
@@ -87,7 +103,7 @@ export default function Header() {
               <ul className="flex gap-5 m-0 p-0 list-none">
                 {socialLinks.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="nav-icon">
+                    <a href={link.href} target="_blank" className="nav-icon">
                       {link.icon}
                     </a>
                   </li>
@@ -103,6 +119,7 @@ export default function Header() {
                 type="button"
                 onClick={toggleMenu}
               >
+                <span className="sr-only">Hamburger</span>
                 <span className="hamburger-box">
                   <span className="hamburger-inner"></span>
                 </span>
@@ -118,10 +135,7 @@ export default function Header() {
                 <ul className="m-0 p-0 list-none flex flex-col gap-8">
                   {navLinks.map((link) => (
                     <li key={link.name}>
-                      <a
-                        href={link.href}
-                        className="no-underline text-3xl text-nav"
-                      >
+                      <a href={link.href} className="no-underline text-3xl">
                         {link.name}
                       </a>
                     </li>

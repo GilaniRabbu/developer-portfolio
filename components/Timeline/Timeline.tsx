@@ -1,65 +1,47 @@
 import React from "react";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
-import "./Timeline.css";
+import { FaGraduationCap, FaRegStar, FaRegCalendarDays } from "react-icons/fa6";
 
 export default function Timeline() {
   const educationData = [
     {
       institution: "National University",
       period: "2023 - Current",
-      degree: "MBA",
-      description:
-        "Pursuing a Master of Business Administration with a focus on advanced management strategies and business leadership skills.",
+      degree: "MBA in Management",
     },
     {
       institution: "National University",
-      period: "2017-2021",
-      degree: "BBA",
-      description:
-        "Gaining comprehensive knowledge in management principles, business operations, and organizational strategies.",
-    },
-    {
-      institution: "Kabi Nazrul College",
-      period: "2015-2017",
-      degree: "Business Studies",
-      description:
-        "Completed HSC in Business Studies, building a strong foundation in accounting, finance, and business principles.",
+      period: "2017 - 2021",
+      degree: "BBA in Management",
     },
   ];
 
   return (
-    <section className="py-16 px-8 text-indigo-900 dark:text-white">
+    <section className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <AnimatedWord
-          text="MyResume"
-          className="text-center mb-20 text-7xl sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem]"
+          text="MyEducation"
+          className="text-center mb-20 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
         />
-        <div className="timeline">
+
+        <div className="flex flex-col gap-10 items-center">
           {educationData.map((item, index) => (
-            <div className="timeline-item" key={index}>
-              <div className="timeline-left">
-                <h3 className="timeline-title">{item.institution}</h3>
-                <p
-                  style={{
-                    color: "var(--tr-timeline-para)",
-                    fontSize: "1rem",
-                  }}
-                >
-                  {item.period}
-                </p>
-              </div>
-              <div className="timeline-dot"></div>
-              <div className="timeline-right">
-                <h3 className="timeline-title">{item.degree}</h3>
-                <p
-                  style={{
-                    color: "var(--tr-timeline-para)",
-                    fontSize: "1rem",
-                  }}
-                >
-                  {item.description}
-                </p>
-              </div>
+            <div
+              className="w-full max-w-96 rounded p-8 bg-[#377E86] text-white"
+              key={index}
+            >
+              <h2 className="text-2xl font-semibold mb-4 flex gap-4 items-center">
+                <FaGraduationCap size={22} />
+                <span>{item.degree}</span>
+              </h2>
+              <h3 className="text-xl mb-4 flex gap-4 items-center">
+                <FaRegStar size={22} />
+                <span>{item.institution}</span>
+              </h3>
+              <p className="text-lg flex gap-4 items-center">
+                <FaRegCalendarDays size={22} />
+                <span>{item.period}</span>
+              </p>
             </div>
           ))}
         </div>
