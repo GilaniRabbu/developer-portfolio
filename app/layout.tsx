@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import "./globals.css";
 
-const quicksand = Quicksand({ subsets: ["latin"], weight: "500" });
+const open_sans = Open_Sans({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
   title: "Portfolio Website",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${quicksand.className}`}>
+      <body className={`antialiased ${open_sans.className}`}>
         <ThemeProvider>
           <Header />
           {children}

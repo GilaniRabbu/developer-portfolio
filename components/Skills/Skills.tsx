@@ -42,7 +42,7 @@ export default function Skills() {
               <h1 className="text-xl mb-4">
                 <code>&lt;Frontend/&gt;</code>
               </h1>
-              <div className="flex justify-center space-x-6">
+              <div className="flex justify-center flex-wrap space-x-6">
                 {frontendSkills.map((skill, index) => (
                   <div key={index} className="relative group">
                     <div className="h-16 w-16 flex items-center justify-center mx-auto text-4xl">
@@ -57,7 +57,7 @@ export default function Skills() {
               <h1 className="text-xl mb-4">
                 <code>&lt;Tools/&gt;</code>
               </h1>
-              <div className="flex justify-center space-x-6">
+              <div className="flex justify-center flex-wrap space-x-6">
                 {tools.map((tool, index) => (
                   <div key={index} className="relative group">
                     <div className="h-16 w-16 flex items-center justify-center mx-auto text-4xl">
