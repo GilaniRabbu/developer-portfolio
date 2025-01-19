@@ -37,12 +37,12 @@ export default function Footer() {
     },
     {
       id: 2,
-      title: "Services",
+      title: "Projects",
       link: "#",
     },
     {
       id: 3,
-      title: "Portfolios",
+      title: "Skill",
       link: "#",
     },
     {
@@ -58,7 +58,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="py-16 relative flex flex-col items-center gap-8 overflow-hidden text-gray-900 dark:text-gray-100 bg-gray-200 dark:bg-gray-800">
+    <footer className="py-16 relative flex flex-col items-center gap-8 overflow-hidden bg-[#CBC9C9] dark:bg-[#292424]">
       <div className="flex gap-4 md:gap-6">
         {footerLinks.map((link) => (
           <a
@@ -66,25 +66,25 @@ export default function Footer() {
             href={link.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 border rounded-full border-gray-900 dark:border-gray-100"
+            className="p-2 border-2 rounded-full border-[#221E1E] dark:border-[#EEF2FF]"
           >
             {link.icon}
           </a>
         ))}
       </div>
-      <div className="h-[1px] w-full bg-gray-900 dark:bg-gray-100"></div>
+      <div className="h-[2px] w-full bg-[#221E1E] dark:bg-[#EEF2FF]"></div>
       <nav className="mt-4 flex gap-4 md:gap-8 flex-col md:flex-row items-center">
         {footerNav.map((item) => (
           <a
             key={item.id}
             href={item.link}
-            className="relative py-1 text-3xl font-bonny-bold footer-link after:bg-gray-900 dark:after:bg-gray-100"
+            className="relative pb-1 text-3xl font-bonny-bold footer-link after:bg-[#221E1E] dark:after:bg-[#EEF2FF]"
           >
             {item.title}
           </a>
         ))}
       </nav>
-      <p className="text-center px-1">
+      <p className="text-center px-2">
         © {new Date().getFullYear()} All rights reserved by{" "}
         <span className="font-bold">Gilani Rabbu</span>
       </p>
