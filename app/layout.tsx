@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Quicksand } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import "./globals.css";
+
+const quicksand = Quicksand({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
   title: "Portfolio Website",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased quicksand-medium`}>
+      <body className={`antialiased ${quicksand.className}`}>
         <ThemeProvider>
           <Header />
           {children}
