@@ -2,8 +2,8 @@
 
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-// import { Player } from "@lottiefiles/react-lottie-player";
-// import HeroAnimation from "./hero-animation.json";
+import { Player } from "@lottiefiles/react-lottie-player";
+import HeroAnimation from "./hero-animation.json";
 import "./Hero.css";
 
 export default function Hero() {
@@ -15,14 +15,14 @@ export default function Hero() {
       <div className="container mx-auto">
         <div className="flex md:gap-8 items-center justify-center">
           <div className="hidden md:block md:w-5/12">
-            {/* <div className="text-center">
+            <div className="text-center">
               <Player
                 src={HeroAnimation}
                 className="m-auto lg:max-w-[480px] md:max-w-[400px] sm:max-w-80 max-w-[256px]"
                 loop
                 autoplay
               />
-            </div> */}
+            </div>
           </div>
           <div className="md:w-6/12">
             <div>
@@ -38,14 +38,14 @@ export default function Hero() {
                   repeat={Infinity}
                 />
               </h1>
-              {/* <div className="md:hidden text-center mb-4">
+              <div className="md:hidden text-center mb-4">
                 <Player
                   src={HeroAnimation}
                   className="m-auto lg:max-w-[480px] md:max-w-[400px] sm:max-w-80 max-w-[256px]"
                   loop
                   autoplay
                 />
-              </div> */}
+              </div>
               <p className="text-lg md:text-xl w-full max-w-[540px]">
                 I am a proficient MERN stack developer with expertise in
                 building dynamic and scalable web applications.
