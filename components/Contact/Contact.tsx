@@ -17,7 +17,7 @@ export default function Contact() {
             seeking a new opportunity to apply my skills and continue growing!
           </p>
           <a
-            className="text-lg px-6 py-4 rounded flex items-center justify-center mail-btn"
+            className="text-2xl px-6 py-3 rounded-full border flex items-center justify-center mail-btn"
             target="_blank"
             title="toufiqjilanirabbu7@gmail.com"
             href="mailto:toufiqjilanirabbu7@gmail.com"
