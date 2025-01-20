@@ -1,5 +1,10 @@
 import React from "react";
-import { FaGithub, FaXTwitter, FaLinkedinIn, FaCodepen } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaFacebookF,
+} from "react-icons/fa6";
 
 export default function Footer() {
   const footerLinks = [
@@ -23,9 +28,9 @@ export default function Footer() {
     },
     {
       id: 4,
-      title: "Codepen",
-      link: "https://codepen.io/GilaniRabbu",
-      icon: <FaCodepen size={20} />,
+      title: "Facebook",
+      link: "https://www.facebook.com/GilaniRabbu",
+      icon: <FaFacebookF size={20} />,
     },
   ];
 

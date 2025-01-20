@@ -92,7 +92,7 @@ const ProjectShowcase: React.FC = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-20 px-4">
       <div className="container mx-auto">
         <AnimatedWord
           text="MyProjects"
