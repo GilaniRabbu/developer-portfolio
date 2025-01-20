@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import {
   FaXTwitter,
@@ -49,16 +48,6 @@ export default function Header() {
 
   const socialLinks = [
     {
-      name: "Twitter",
-      href: "https://x.com/GilaniRabbu",
-      icon: <FaXTwitter />,
-    },
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/GilaniRabbu",
-      icon: <FaFacebookF />,
-    },
-    {
       name: "LinkedIn",
       href: "http://www.linkedin.com/in/toufiq-gilani-rabbu",
       icon: <FaLinkedinIn />,
@@ -67,6 +56,16 @@ export default function Header() {
       name: "Github",
       href: "https://github.com/GilaniRabbu",
       icon: <FaGithub />,
+    },
+    {
+      name: "Twitter",
+      href: "https://x.com/GilaniRabbu",
+      icon: <FaXTwitter />,
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/GilaniRabbu",
+      icon: <FaFacebookF />,
     },
   ];
 

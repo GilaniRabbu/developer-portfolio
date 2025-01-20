@@ -1,6 +1,5 @@
 import React from "react";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
-import { Tooltip } from "react-tooltip";
 
 export default function Contact() {
   return (
@@ -18,9 +17,10 @@ export default function Contact() {
             seeking a new opportunity to apply my skills and continue growing!
           </p>
           <a
-            className="mb-8 text-lg px-6 py-4 rounded flex items-center justify-center border-2 text-[#239982] border-[#239982] mail-btn"
+            className="text-lg px-6 py-4 rounded flex items-center justify-center mail-btn"
             target="_blank"
-            href="mailto:toufiqjilanirabbu@gmail.com"
+            title="toufiqjilanirabbu7@gmail.com"
+            href="mailto:toufiqjilanirabbu7@gmail.com"
           >
             Send Mail
           </a>

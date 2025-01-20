@@ -8,10 +8,6 @@
   .tr-btn {
     @apply rounded-full text-sm px-6 py-3 text-center border text-[#221E1E] dark:text-[#EEF2FF] border-[#221E1E] dark:border-[#EEF2FF];
   }
-
-  .contact-icon {
-    @apply px-4 py-2 rounded flex items-center justify-center bg-indigo-400;
-  }
 }
 
 /* Default light theme */
@@ -19,7 +15,11 @@
   --tr-theme-body-bg: #EEF2FF;
   --tr-theme-body-text: #221E1E;
   --tr-theme-primary: #F59C5C;
-  --tr-title-gradient: linear-gradient(90deg, #239982 -1.88%, #6D64D3 104.56%);
+
+  --tr-mail-btn-bg: #F59C5C;
+  --tr-mail-btn-text: #221E1E;
+  --tr-mail-btn-bg-hover: #377E86;
+  --tr-mail-btn-text-hover: #FFFFFF;
 
   --tr-nav-bg: #FFFFFF;
   --tr-nav-text: #050709;
@@ -33,6 +33,11 @@
   --tr-theme-body-bg: #221E1E;
   --tr-theme-body-text: #EEF2FF;
   --tr-theme-primary: #F59C5C;
+
+  --tr-mail-btn-bg: #F7B687;
+  --tr-mail-btn-text: #221E1E;
+  --tr-mail-btn-bg-hover: #7E3E3F;
+  --tr-mail-btn-text-hover: #FFFFFF;
 
   --tr-nav-bg: #050709;
   --tr-nav-text: #FFFFFF;
@@ -82,12 +87,14 @@ body {
 }
 
 .mail-btn {
+  color: var(--tr-mail-btn-text);
+  background: var(--tr-mail-btn-bg);
   transition: all 0.2s;
 }
 
 .mail-btn:hover {
-  background: #FFF;
-  -webkit-text-fill-color: #000;
+  -webkit-text-fill-color: var(--tr-mail-btn-text-hover);
+  background: var(--tr-mail-btn-bg-hover);
   transform: translateY(-10px);
 }
 
