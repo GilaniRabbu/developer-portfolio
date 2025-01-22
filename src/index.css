@@ -2,10 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --tr-body-bg: #E9EDFB;
+  --tr-body-text: #0A192F;
+  --tr-primary-clr: #008062;
+  --tr-secondary-clr: #E9EDFB;
+}
+
+.dark {
+  --tr-body-bg: #0A192F;
+  --tr-body-text: #E9EDFB;
+  --tr-primary-clr: #64FFDA;
+  --tr-secondary-clr: #0A192F;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  color: var(--tr-body-text);
+  background: var(--tr-body-bg);
+}
+
+.text-primary {
+  color: var(--tr-primary-clr);
+}
+
+.text-secondary {
+  color: var(--tr-secondary-clr);
+}
+
+.bg-primary {
+  background: var(--tr-primary-clr);
+}
+
+.border-primary {
+  border-color: var(--tr-primary-clr);
 }

@@ -5,12 +5,12 @@ import ThemeSwitcher from "../theme/ThemeSwitcher";
 
 const Navbar = () => {
   return (
-    <div className="h-[100px] text-zinc-950 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-950">
+    <div className="h-24">
       <Sidebar />
       <ThemeSwitcher />
-      <div className="max-w-screen-xl h-full flex justify-center items-center m-auto px-4">
+      <div className="container h-full flex justify-center items-center m-auto px-4">
         <motion.div
-          className="flex gap-3 py-2 px-5 rounded-full border border-zinc-950 dark:border-zinc-100"
+          className="flex gap-3 py-2 px-5 rounded-full border border-primary"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}

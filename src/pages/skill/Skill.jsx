@@ -1,100 +1,129 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaReact,
+  FaNodeJs,
+  FaPhp,
+  FaGithub,
+  FaGitAlt,
+  FaNpm,
+} from "react-icons/fa6";
+import {
+  SiJavascript,
+  SiJquery,
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiExpress,
+  SiFirebase,
+  SiVercel,
+  SiNetlify,
+  SiMongodb,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 const skill = [
   {
     id: 1,
-    img: "./html.png",
+    icon: <FaHtml5 size={40} className="text-primary" />,
     title: "HTML5",
   },
   {
     id: 2,
-    img: "./css.png",
+    icon: <FaCss3Alt size={56} className="text-primary" />,
     title: "CSS3",
   },
   {
     id: 3,
-    img: "./js.png",
+    icon: <SiJavascript size={56} className="text-primary" />,
     title: "JavaScript",
   },
   {
     id: 4,
-    img: "./jquery.svg",
+    icon: <SiJquery size={56} className="text-primary" />,
     title: "jQuery",
   },
   {
     id: 5,
-    img: "./bootstrap.png",
+    icon: <FaBootstrap size={56} className="text-primary" />,
     title: "BootStrap",
   },
   {
     id: 6,
-    img: "./tailwind.svg",
+    icon: <SiTailwindcss size={56} className="text-primary" />,
     title: "Tailwind CSS",
   },
   {
     id: 7,
-    img: "./react.png",
+    icon: <FaReact size={56} className="text-primary" />,
     title: "React JS",
   },
   {
     id: 8,
-    img: "./next.svg",
+    icon: <SiNextdotjs size={56} className="text-primary" />,
     title: "Next JS",
   },
   {
     id: 9,
-    img: "./node.svg",
+    icon: <FaNodeJs size={56} className="text-primary" />,
     title: "Node JS",
   },
   {
     id: 10,
-    img: "./express.svg",
+    icon: <SiExpress size={56} className="text-primary" />,
     title: "Express JS",
   },
   {
     id: 11,
-    img: "./mongodb.svg",
+    icon: <SiMongodb size={56} className="text-primary" />,
     title: "MongoDB",
   },
   {
     id: 12,
-    img: "./php.png",
-    title: "PHP",
+    icon: <SiTypescript size={56} className="text-primary" />,
+    title: "Typescript",
   },
   {
     id: 13,
-    img: "./git.svg",
-    title: "Git",
+    icon: <FaPhp size={56} className="text-primary" />,
+    title: "PHP",
   },
   {
     id: 14,
-    img: "./github.svg",
-    title: "Github",
+    icon: <FaGitAlt size={56} className="text-primary" />,
+    title: "Git",
   },
   {
     id: 15,
-    img: "./firebase.svg",
-    title: "Firebase",
+    icon: <FaGithub size={56} className="text-primary" />,
+    title: "Github",
   },
   {
     id: 16,
-    img: "./npm.svg",
-    title: "npm",
+    icon: <SiFirebase size={56} className="text-primary" />,
+    title: "Firebase",
   },
   {
     id: 17,
-    img: "./vs-code.png",
-    title: "VS Code",
+    icon: <FaNpm size={56} className="text-primary" />,
+    title: "npm",
   },
   {
     id: 18,
-    img: "./netlify.svg",
-    title: "Netlify",
+    icon: <VscVscode size={56} className="text-primary" />,
+    title: "VS Code",
   },
   {
     id: 19,
-    img: "./vercel.svg",
+    icon: <SiNetlify size={56} className="text-primary" />,
+    title: "Netlify",
+  },
+  {
+    id: 20,
+    icon: <SiVercel size={56} className="text-primary" />,
     title: "Vercel",
   },
 ];
@@ -102,25 +131,22 @@ const skill = [
 const Skill = ({ item }) => {
   return (
     <motion.div
-      className="w-[130px] h-[130px] cursor-pointer grid place-items-center rounded bg-zinc-300 dark:bg-zinc-800"
+      className="cursor-pointer w-28 h-28 grid place-items-center border-4 rounded border-primary"
       whileHover={{ scale: 1.07 }}
       whileTap={{ scale: 0.95 }}
     >
-      <img
-        src={item.img}
-        title={item.title}
-        className="max-w-20 m-auto"
-        alt="..."
-      />
+      <div title={item.title} className="m-auto">
+        {item.icon}
+      </div>
     </motion.div>
   );
 };
 
 const SkillPage = () => {
   return (
-    <div className="py-10 text-blue-800 dark:text-blue-400 bg-zinc-100 dark:bg-zinc-950">
-      <div className="m-auto max-w-3xl">
-        <h2 className="font-bold font-serif text-4xl text-center mb-10 p-2 md:p-0">
+    <div className="py-10 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="mb-10 text-5xl text-center font-serif text-primary">
           My Skills & Tools
         </h2>
         <div className="flex gap-5 justify-center items-center flex-wrap flex-row">
