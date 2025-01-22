@@ -131,7 +131,9 @@ const Hero = () => {
                 <motion.div
                   key={icon.id}
                   title={icon.title}
-                  className="flex justify-center items-center cursor-pointer rounded-full border p-3 text-primary border-primary"
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex justify-center items-center heartbeat cursor-pointer rounded-full p-3 text-[#FFFFFF] dark:text-[#221E1E] bg-[#377E86] dark:bg-[#659477]"
                 >
                   {icon.icon}
                 </motion.div>
