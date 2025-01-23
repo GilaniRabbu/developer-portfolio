@@ -94,7 +94,7 @@ const Project = ({ item }) => {
   };
 
   return (
-    <div className="p-4 rounded md:max-w-96 bg-[#BECAF3] dark:bg-[#163769]">
+    <div className="p-4 rounded mx-auto md:mx-0 max-w-80 md:max-w-96 bg-[#BECAF3] dark:bg-[#163769]">
       <div className="mb-4 overflow-hidden rounded">
         <motion.img
           src={item.img}

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaFire, FaGhost } from "react-icons/fa6";
-import { motion } from "framer-motion";
 
 const ThemeSwitcher = () => {
   const [theme, setTheme] = useState(null);
@@ -26,14 +25,9 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <motion.button
-      onClick={handleThemeSwitch}
-      className="cursor-pointer"
-      whileHover={{ opacity: 0.7 }}
-      whileTap={{ scale: 1 }}
-    >
+    <button onClick={handleThemeSwitch} className="cursor-pointer">
       {theme === "light" ? <FaFire size={23} /> : <FaGhost size={23} />}
-    </motion.button>
+    </button>
   );
 };
 
