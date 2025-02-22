@@ -10,8 +10,8 @@ import {
 } from "react-icons/si";
 import { FaConfluence, FaGitAlt, FaJira } from "react-icons/fa";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
-import SkillSlider from "./SkillSlider";
 import SkillAccordion, { AccordionItem } from "./SkillAccordion";
+import { MarqueeSlide } from "@/components/Marque/MarqueeSlide";
 
 export default function Skills() {
   const frontend: AccordionItem[] = [
@@ -59,7 +59,7 @@ export default function Skills() {
         text="SkillsOfMine"
         className="text-center mb-20 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
       />
-      <SkillSlider />
+      <MarqueeSlide />
       <div className="container mx-auto mt-20 px-4">
         <div className="flex justify-center items-center">
           <div className="flex flex-1 gap-5 flex-col">
