@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
 
@@ -101,19 +100,17 @@ const ProjectShowcase: React.FC = () => {
 
         <div className="flex justify-center mb-12 gap-4 flex-wrap">
           {categories.map((category) => (
-            <motion.button
+            <button
               key={category}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={`px-6 py-2 rounded-full text-sm transition-all duration-300 ${
+              className={`p-2 border-b text-sm ${
                 selectedCategory === category
-                  ? "bg-green-500 text-white"
-                  : "bg-gray-900 text-white hover:bg-gray-700"
+                  ? "border-b-green-700 dark:border-b-green-500 text-black dark:text-white"
+                  : "border-b-gray-900 dark:border-b-gray-500 text-black dark:text-white"
               }`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}
-            </motion.button>
+            </button>
           ))}
         </div>
 
@@ -121,20 +118,20 @@ const ProjectShowcase: React.FC = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="overflow-hidden rounded-md shadow-md bg-[#F7B687] dark:bg-[#875C36]"
+              className="overflow-hidden p-8 rounded-lg shadow-md bg-[#F7B687] dark:bg-[#875C36]"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden rounded-md mb-4">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-52 object-cover"
+                  className="w-full h-auto object-cover cursor-pointer transition-all duration-500 hover:scale-110"
                   onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                     e.currentTarget.src =
                       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3";
                   }}
                 />
               </div>
-              <div className="p-4">
+              <div className="">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="mb-4 text-sm tracking-wide">
                   {project.tags.join(" | ")}
