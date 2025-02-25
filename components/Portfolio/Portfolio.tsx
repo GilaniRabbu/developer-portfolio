@@ -15,7 +15,7 @@ interface Project {
 }
 
 const ProjectShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Projects");
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
 
   const categories: string[] = [
