@@ -19,7 +19,7 @@ const ProjectShowcase: React.FC = () => {
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
 
   const categories: string[] = [
-    "All",
+    "Projects",
     "Web Development",
     "Mobile Apps",
     "UX/UI Design",
@@ -84,7 +84,7 @@ const ProjectShowcase: React.FC = () => {
 
   useEffect(() => {
     setFilteredProjects(
-      selectedCategory === "All"
+      selectedCategory === "Projects"
         ? projects
         : projects.filter((project) => project.category === selectedCategory)
     );
@@ -104,8 +104,8 @@ const ProjectShowcase: React.FC = () => {
               key={category}
               className={`p-2 border-b text-sm ${
                 selectedCategory === category
-                  ? "border-b-green-700 dark:border-b-green-500 text-black dark:text-white"
-                  : "border-b-gray-900 dark:border-b-gray-500 text-black dark:text-white"
+                  ? "border-b-green-600 dark:border-b-green-400 text-green-600 dark:text-green-400"
+                  : "border-b-gray-900 dark:border-b-gray-400 text-black dark:text-white"
               }`}
               onClick={() => setSelectedCategory(category)}
             >
