@@ -2,29 +2,15 @@
 
 import React, { useState } from "react";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
+import { CodeBlockEducation } from "./CodeBlockEducation";
 
 function Timelines() {
-  return (
-    <section className="container mx-auto">
-      <div className="flex flex-col gap-4 text-white uppercase">
-        <div className="p-4 bg-indigo-500 rounded shadow">
-          <p className="text-sm font-semibold">2023 - Current</p>
-          <h3 className="font-semibold text-lg mb-2">MBA in Management</h3>
-          <p className="text-sm">National University</p>
-        </div>
-        <div className="p-4 bg-indigo-500 rounded shadow">
-          <p className="text-sm font-semibold">2017 - 2021</p>
-          <h3 className="font-semibold text-lg mb-2">BBA in Management</h3>
-          <p className="text-sm">National University</p>
-        </div>
-      </div>
-    </section>
-  );
+  return <CodeBlockEducation />;
 }
 
 function Resume() {
   return (
-    <section className="p-5">
+    <section className="p-4">
       <h2 className="text-3xl font-bold mb-4">My Resume</h2>
       <p>Details about my work experience and skills.</p>
     </section>
@@ -33,7 +19,7 @@ function Resume() {
 
 function Certificates() {
   return (
-    <section className="p-5">
+    <section className="p-4">
       <h2 className="text-3xl font-bold mb-4">Certificates</h2>
       <p>Here are my earned certificates.</p>
     </section>
@@ -41,7 +27,7 @@ function Certificates() {
 }
 
 export default function Timeline() {
-  const [activeTab, setActiveTab] = useState("timeline");
+  const [activeTab, setActiveTab] = useState("education");
 
   return (
     <section className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -50,41 +36,40 @@ export default function Timeline() {
           text="My Profile"
           className="text-center mb-20 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
         />
-        <div className="flex justify-center gap-4 mb-6">
+        <div className="flex justify-center flex-wrap items-center gap-4 mb-6">
           <button
-            className={`px-4 py-2 ${
-              activeTab === "timeline"
-                ? "bg-indigo-500 text-white"
-                : "bg-gray-200 text-black"
+            className={`p-2 border-b ${
+              activeTab === "education"
+                ? "border-b-indigo-600 text-indigo-600 dark:border-b-indigo-400 dark:text-indigo-400"
+                : "border-b-black dark:border-b-white text-black dark:text-white"
             }`}
-            onClick={() => setActiveTab("timeline")}
+            onClick={() => setActiveTab("education")}
           >
             Education
           </button>
           <button
-            className={`px-4 py-2 ${
+            className={`p-2 border-b ${
               activeTab === "resume"
-                ? "bg-sky-500 text-white"
-                : "bg-gray-200 text-black"
+                ? "border-b-sky-600 text-sky-600 dark:border-b-sky-400 dark:text-sky-400"
+                : "border-b-black dark:border-b-white text-black dark:text-white"
             }`}
             onClick={() => setActiveTab("resume")}
           >
             Resume
           </button>
           <button
-            className={`px-4 py-2 ${
+            className={`p-2 border-b ${
               activeTab === "certificates"
-                ? "bg-green-500 text-white"
-                : "bg-gray-200 text-black"
+                ? "border-b-green-600 text-green-600 dark:border-b-green-400 dark:text-green-400"
+                : "border-b-black dark:border-b-white text-black dark:text-white"
             }`}
             onClick={() => setActiveTab("certificates")}
           >
             Certificates
           </button>
         </div>
-
         <div>
-          {activeTab === "timeline" && <Timelines />}
+          {activeTab === "education" && <Timelines />}
           {activeTab === "resume" && <Resume />}
           {activeTab === "certificates" && <Certificates />}
         </div>
