@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { LuBadgePlus } from "react-icons/lu";
+import { FaPlus } from "react-icons/fa6";
 
 export type AccordionItem = {
   title: string;
@@ -22,12 +22,14 @@ const SkillAccordion: React.FC<AccordionProps> = ({ items }) => {
       {items.map((item, index) => (
         <div key={index}>
           <div className="flex p-5 items-center justify-between">
-            <p className="text-xl">{item.title}</p>
+            <p className="text-xl">
+              <code>{item.title}</code>
+            </p>
             <button
               onClick={() => toggleAccordion(index)}
-              className="p-2 border rounded-full"
+              className="p-2 border rounded-full border-[#221E1E] dark:border-[#EEF2FF]"
             >
-              <LuBadgePlus size="24" />
+              <FaPlus size="20" />
             </button>
           </div>
           {openIndex === index && (

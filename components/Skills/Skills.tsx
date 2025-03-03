@@ -8,8 +8,21 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiSass,
+  SiExpress,
+  SiMongodb,
+  SiFirebase,
+  SiJquery,
+  SiGitbook,
+  SiPostman,
 } from "react-icons/si";
-import { FaConfluence, FaGitAlt, FaJira } from "react-icons/fa";
+import {
+  FaNodeJs,
+  FaFigma,
+  FaGithub,
+  FaGitAlt,
+  FaBootstrap,
+} from "react-icons/fa6";
+import { VscVscode } from "react-icons/vsc";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
 import SkillAccordion, { AccordionItem } from "./SkillAccordion";
 import { MarqueeSlide } from "@/components/Marque/MarqueeSlide";
@@ -19,10 +32,15 @@ export default function Skills() {
     {
       title: "<Frontend />",
       content: (
-        <div className="flex items-center gap-2 text-3xl">
-          <SiTypescript className="text-blue-400" />
-          <SiReact className="text-sky-400" />
-          <SiNextdotjs className="text-slate-700" />
+        <div className="flex items-center flex-wrap gap-5 text-3xl text-[#1F2328] dark:text-[#38BDF8]">
+          <SiTypescript />
+          <SiJavascript />
+          <SiNextdotjs />
+          <SiReact />
+          <SiJquery />
+          <SiSass />
+          <FaBootstrap />
+          <SiTailwindcss />
         </div>
       ),
     },
@@ -32,10 +50,22 @@ export default function Skills() {
     {
       title: "<Backend />",
       content: (
-        <div className="flex items-center gap-2 text-3xl">
-          <SiJavascript className="text-yellow-500" />
-          <SiTailwindcss className="text-sky-500" />
-          <SiSass className="text-pink-500" />
+        <div className="flex items-center flex-wrap gap-5 text-3xl text-[#1F2328] dark:text-[#00ED64]">
+          <FaNodeJs />
+          <SiExpress />
+          <SiFirebase />
+          <SiMongodb />
+        </div>
+      ),
+    },
+  ];
+
+  const design: AccordionItem[] = [
+    {
+      title: "<Design />",
+      content: (
+        <div className="flex items-center flex-wrap gap-5 text-3xl text-[#1F2328] dark:text-[#FF5C16]">
+          <FaFigma />
         </div>
       ),
     },
@@ -45,10 +75,12 @@ export default function Skills() {
     {
       title: "<Tools />",
       content: (
-        <div className="flex items-center gap-2 text-3xl">
-          <FaGitAlt className="text-orange-500" />
-          <FaConfluence className="text-orange-500" />
-          <FaJira className="text-orange-500" />
+        <div className="flex items-center flex-wrap gap-5 text-3xl text-[#1F2328] dark:text-[#F74D27]">
+          <FaGitAlt />
+          <FaGithub />
+          <SiGitbook />
+          <SiPostman />
+          <VscVscode />
         </div>
       ),
     },
@@ -69,13 +101,13 @@ export default function Skills() {
                 <SkillAccordion items={frontend} />
               </div>
               <div className="w-full rounded overflow-hidden bg-accordion">
-                <SkillAccordion items={backend} />
+                <SkillAccordion items={design} />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-[0.8fr,1.2fr] gap-5">
               <div className="w-full rounded overflow-hidden bg-accordion">
-                <SkillAccordion items={tools} />
+                <SkillAccordion items={backend} />
               </div>
               <div className="w-full rounded overflow-hidden bg-accordion">
                 <SkillAccordion items={tools} />
