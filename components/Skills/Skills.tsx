@@ -11,7 +11,6 @@ import {
   SiExpress,
   SiMongodb,
   SiFirebase,
-  SiJquery,
   SiGitbook,
   SiPostman,
 } from "react-icons/si";
@@ -25,7 +24,6 @@ import {
 import { VscVscode } from "react-icons/vsc";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
 import SkillAccordion, { AccordionItem } from "./SkillAccordion";
-import { MarqueeSlide } from "@/components/Marque/MarqueeSlide";
 
 export default function Skills() {
   const frontend: AccordionItem[] = [
@@ -33,11 +31,10 @@ export default function Skills() {
       title: "<Frontend />",
       content: (
         <div className="flex items-center flex-wrap gap-5 text-3xl text-[#1F2328] dark:text-[#38BDF8]">
-          <SiTypescript />
           <SiJavascript />
           <SiNextdotjs />
           <SiReact />
-          <SiJquery />
+          <SiTypescript />
           <SiSass />
           <FaBootstrap />
           <SiTailwindcss />
@@ -92,7 +89,6 @@ export default function Skills() {
         text="SkillsOfMine"
         className="text-center mb-20 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
       />
-      <MarqueeSlide />
       <div className="container mx-auto mt-20 px-4">
         <div className="flex justify-center items-center">
           <div className="flex flex-1 gap-5 flex-col">
