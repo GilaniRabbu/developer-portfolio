@@ -2,27 +2,31 @@
 
 import React, { useState } from "react";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
-import { CodeBlockEducation } from "./CodeBlockEducation";
+import EducationSection from "./Education";
 
 function Timelines() {
-  return <CodeBlockEducation />;
+  return (
+    <div className="p-4">
+      <EducationSection />
+    </div>
+  );
 }
 
 function Resume() {
   return (
-    <section className="p-4">
+    <div className="p-4">
       <h2 className="text-3xl font-bold mb-4">My Resume</h2>
       <p>Details about my work experience and skills.</p>
-    </section>
+    </div>
   );
 }
 
 function Certificates() {
   return (
-    <section className="p-4">
+    <div className="p-4">
       <h2 className="text-3xl font-bold mb-4">Certificates</h2>
       <p>Here are my earned certificates.</p>
-    </section>
+    </div>
   );
 }
 
