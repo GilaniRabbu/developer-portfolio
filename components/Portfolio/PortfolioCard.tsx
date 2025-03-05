@@ -9,6 +9,7 @@ const cardData = [
     title: "FurStore E-Commerce",
     description: "Fully Responsive E-Commerce site built with MERN stack.",
     image: "./portfolio_1.png",
+    tech: ["Typescript", "Next.js", "Tailwind"],
     link: "https://ecommerce-fur-store.vercel.app/",
     github: "https://github.com/GilaniRabbu/ecommerce-website.git",
   },
@@ -17,6 +18,7 @@ const cardData = [
     title: "GitHub Users Finder App",
     description: "Fetches and displays user profile data dynamically.",
     image: "./portfolio_2.png",
+    tech: ["Typescript", "Next.js", "Tailwind", "Api"],
     link: "https://github-user-search-app-v3.vercel.app/",
     github: "https://github.com/GilaniRabbu/github-user-search-app.git",
   },
@@ -25,6 +27,7 @@ const cardData = [
     title: "AI Landing Page",
     description: "Responsive landing page added dynamic animations.",
     image: "./portfolio_2.png",
+    tech: ["Next.js", "Tailwind", "framer-motion"],
     link: "https://ai-landing-v1.vercel.app/",
     github: "https://github.com/GilaniRabbu/ai-landing-page.git",
   },
@@ -33,6 +36,7 @@ const cardData = [
     title: "Rest Countries Api",
     description: "See all countries from the API on the homepage.",
     image: "./portfolio_3.png",
+    tech: ["React", "Vite", "Api"],
     link: "https://rest-countries-api-solution-v2.vercel.app/",
     github: "https://github.com/GilaniRabbu/rest-countries-api-solution.git",
   },
@@ -66,7 +70,19 @@ export default function PortfolioCard() {
                 alt={`${card.title} thumbnail`}
               />
             </CardItem>
-            <div className="flex justify-between items-center mt-20">
+            <CardItem translateZ="80" className="w-full mt-5">
+              <div className="flex flex-wrap gap-2">
+                {card.tech.map((category, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 text-xs font-medium rounded-full bg-black/5 dark:bg-white/10 text-neutral-700 dark:text-neutral-200"
+                  >
+                    {category}
+                  </span>
+                ))}
+              </div>
+            </CardItem>
+            <div className="flex justify-between items-center mt-16">
               <CardItem
                 translateZ={20}
                 as={Link}
