@@ -24,6 +24,7 @@ import {
 import { VscVscode } from "react-icons/vsc";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
 import SkillAccordion, { AccordionItem } from "./SkillAccordion";
+import IconCloudSlug from "@/components/Skills/IconCloudSlug";
 
 export default function Skills() {
   const frontend: AccordionItem[] = [
@@ -90,6 +91,7 @@ export default function Skills() {
         className="text-center mb-20 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
       />
       <div className="container mx-auto mt-20 px-4">
+        <IconCloudSlug />
         <div className="flex justify-center items-center">
           <div className="flex flex-1 gap-5 flex-col">
             <div className="grid grid-cols-1 md:grid-cols-[1.2fr,0.8fr] gap-5">
@@ -110,6 +112,7 @@ export default function Skills() {
               </div>
             </div>
           </div>
+          I
         </div>
       </div>
     </section>
