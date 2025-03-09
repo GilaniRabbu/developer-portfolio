@@ -112,7 +112,6 @@ export default function Skills() {
               </div>
             </div>
           </div>
-          I
         </div>
       </div>
     </section>

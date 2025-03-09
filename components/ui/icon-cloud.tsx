@@ -52,8 +52,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
     const newIconCanvases = items.map((item, index) => {
       const offscreen = document.createElement("canvas");
-      offscreen.width = 40;
-      offscreen.height = 40;
+      offscreen.width = 40; // Adjust Icon size to 40
+      offscreen.height = 40; // Adjust Icon size to 40
       const offCtx = offscreen.getContext("2d");
 
       if (offCtx) {
@@ -67,12 +67,32 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
             // Create circular clipping path
             offCtx.beginPath();
-            offCtx.arc(20, 20, 20, 0, Math.PI * 2);
+            // Adjust this value to control border radius size
+            const borderRadius = 2; // Adjust this value to control border radius size (smaller = less rounded)
+            const width = 60; // Match your icon width
+            const height = 60; // Match your icon height
+            offCtx.moveTo(borderRadius, 0);
+            offCtx.lineTo(width - borderRadius, 0);
+            offCtx.quadraticCurveTo(width, 0, width, borderRadius);
+            offCtx.lineTo(width, height - borderRadius);
+            offCtx.quadraticCurveTo(
+              width,
+              height,
+              width - borderRadius,
+              height
+            );
+            offCtx.lineTo(borderRadius, height);
+            offCtx.quadraticCurveTo(0, height, 0, height - borderRadius);
+            offCtx.lineTo(0, borderRadius);
+            offCtx.quadraticCurveTo(0, 0, borderRadius, 0);
+            // Adjust this value to control border radius size
+
+            offCtx.arc(20, 20, 20, 0, Math.PI * 2); // Adjust Icon size to 20
             offCtx.closePath();
             offCtx.clip();
 
             // Draw the image
-            offCtx.drawImage(img, 0, 0, 40, 40);
+            offCtx.drawImage(img, 0, 0, 40, 40); // Adjust Icon size to 40
 
             imagesLoadedRef.current[index] = true;
           };
@@ -113,10 +133,11 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const x = Math.cos(phi) * r;
       const z = Math.sin(phi) * r;
 
+      // In the useEffect that generates initial icon positions
       newIcons.push({
-        x: x * 100,
-        y: y * 100,
-        z: z * 100,
+        x: x * 150, // Increased from 100
+        y: y * 150, // Increased from 100
+        z: z * 150, // Increased from 100
         scale: 1,
         opacity: 1,
         id: i,
@@ -199,8 +220,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const deltaY = e.clientY - lastMousePos.y;
 
       rotationRef.current = {
-        x: rotationRef.current.x + deltaY * 0.002,
-        y: rotationRef.current.y + deltaX * 0.002,
+        x: rotationRef.current.x + deltaY * 0.004, // Doubled from 0.002
+        y: rotationRef.current.y + deltaX * 0.004, // Doubled from 0.002
       };
 
       setLastMousePos({ x: e.clientX, y: e.clientY });
@@ -226,7 +247,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const dx = mousePos.x - centerX;
       const dy = mousePos.y - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
-      const speed = 0.003 + (distance / maxDistance) * 0.01;
+      const speed = 0.006 + (distance / maxDistance) * 0.02; // Doubled from 0.003 and 0.01
 
       if (targetRotation) {
         const elapsed = performance.now() - targetRotation.startTime;
@@ -279,12 +300,26 @@ export function IconCloud({ icons, images }: IconCloudProps) {
             iconCanvasesRef.current[index] &&
             imagesLoadedRef.current[index]
           ) {
-            ctx.drawImage(iconCanvasesRef.current[index], -20, -20, 40, 40);
+            ctx.drawImage(iconCanvasesRef.current[index], -20, -20, 40, 40); // Adjust Icon size to 20 & 40
           }
         } else {
           // Show numbered circles if no icons/images are provided
           ctx.beginPath();
-          ctx.arc(0, 0, 20, 0, Math.PI * 2);
+          // Adjust this value to control border radius size
+          const fallbackBorderRadius = 2; // Same border radius as above
+          ctx.moveTo(-30 + fallbackBorderRadius, -30);
+          ctx.lineTo(30 - fallbackBorderRadius, -30);
+          ctx.quadraticCurveTo(30, -30, 30, -30 + fallbackBorderRadius);
+          ctx.lineTo(30, 30 - fallbackBorderRadius);
+          ctx.quadraticCurveTo(30, 30, 30 - fallbackBorderRadius, 30);
+          ctx.lineTo(-30 + fallbackBorderRadius, 30);
+          ctx.quadraticCurveTo(-30, 30, -30, 30 - fallbackBorderRadius);
+          ctx.lineTo(-30, -30 + fallbackBorderRadius);
+          ctx.quadraticCurveTo(-30, -30, -30 + fallbackBorderRadius, -30);
+          ctx.closePath();
+          // Adjust this value to control border radius size
+
+          ctx.arc(0, 0, 20, 0, Math.PI * 2); // Adjust Icon size to 20
           ctx.fillStyle = "#4444ff";
           ctx.fill();
           ctx.fillStyle = "white";
@@ -317,9 +352,12 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className="rounded-lg"
+      className="my-10"
       aria-label="Interactive 3D Icon Cloud"
       role="img"
     />
   );
 }
+
+// Line: 55, 56, 90, 95, 302, 321 - Icon Size
+// Line: 222, 223, 249 - Speed Control
