@@ -52,8 +52,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
     const newIconCanvases = items.map((item, index) => {
       const offscreen = document.createElement("canvas");
-      offscreen.width = 40; // Adjust Icon size to 40
-      offscreen.height = 40; // Adjust Icon size to 40
+      offscreen.width = 32; // Adjust Icon size to 40
+      offscreen.height = 32; // Adjust Icon size to 40
       const offCtx = offscreen.getContext("2d");
 
       if (offCtx) {
@@ -87,12 +87,12 @@ export function IconCloud({ icons, images }: IconCloudProps) {
             offCtx.quadraticCurveTo(0, 0, borderRadius, 0);
             // Adjust this value to control border radius size
 
-            offCtx.arc(20, 20, 20, 0, Math.PI * 2); // Adjust Icon size to 20
+            offCtx.arc(16, 16, 16, 0, Math.PI * 2); // Adjust Icon size to 20
             offCtx.closePath();
             offCtx.clip();
 
             // Draw the image
-            offCtx.drawImage(img, 0, 0, 40, 40); // Adjust Icon size to 40
+            offCtx.drawImage(img, 0, 0, 32, 32); // Adjust Icon size to 40
 
             imagesLoadedRef.current[index] = true;
           };
@@ -300,7 +300,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
             iconCanvasesRef.current[index] &&
             imagesLoadedRef.current[index]
           ) {
-            ctx.drawImage(iconCanvasesRef.current[index], -20, -20, 40, 40); // Adjust Icon size to 20 & 40
+            ctx.drawImage(iconCanvasesRef.current[index], -16, -16, 32, 32); // Adjust Icon size to 20 & 40
           }
         } else {
           // Show numbered circles if no icons/images are provided
@@ -319,7 +319,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
           ctx.closePath();
           // Adjust this value to control border radius size
 
-          ctx.arc(0, 0, 20, 0, Math.PI * 2); // Adjust Icon size to 20
+          ctx.arc(0, 0, 16, 0, Math.PI * 2); // Adjust Icon size to 20
           ctx.fillStyle = "#4444ff";
           ctx.fill();
           ctx.fillStyle = "white";
@@ -359,5 +359,5 @@ export function IconCloud({ icons, images }: IconCloudProps) {
   );
 }
 
-// Line: 55, 56, 90, 95, 302, 321 - Icon Size
+// Line: 55, 56, 90, 95, 303, 322 - Icon Size
 // Line: 222, 223, 249 - Speed Control
