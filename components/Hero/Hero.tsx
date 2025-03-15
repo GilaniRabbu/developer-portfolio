@@ -12,19 +12,20 @@ export default function Hero() {
     >
       <div className="container mx-auto">
         <div className="flex md:gap-8 items-center justify-evenly">
-          <div className="hidden md:block md:w-4/12">
-            <div className="text-center">
+          <div className="hidden md:block md:w-5/12">
+            <div className="relative w-full max-w-80 mx-auto">
+              <div className="absolute inset-0 bg-transparent rounded-md border-4 border-black dark:border-white translate-x-4 translate-y-4 z-0" />
               <img
                 src="/profile.png"
                 alt="Admin Image"
-                className="mx-auto rounded-3xl w-full md:max-w-[400px] sm:max-w-80 max-w-[256px]"
+                className="mx-auto relative w-full rounded-md z-10"
               />
             </div>
           </div>
-          <div className="md:w-6/12">
+          <div className="md:w-7/12">
             <div>
               <span className="block mb-3 font-bold text-2xl md:text-3xl">
-                MD TOUFIQ GILANI RABBU
+                Hi, I am Gilani
               </span>
               <h1 className="mb-6 text-3xl md:text-4xl lg:text-5xl text-[#23412F] md:text-[#F59C5C] dark:text-[#F7B687]">
                 <TypeAnimation
@@ -42,7 +43,7 @@ export default function Hero() {
                   className="mx-auto rounded-3xl w-full md:max-w-[400px] sm:max-w-80 max-w-[256px]"
                 />
               </div>
-              <p className="text-lg md:text-xl w-full max-w-[540px]">
+              <p className="text-lg md:text-xl w-full max-w-xl">
                 I am a proficient MERN stack developer with expertise in
                 building dynamic and scalable web applications.
               </p>
@@ -51,7 +52,7 @@ export default function Hero() {
                   Download CV
                 </a>
                 <a href="#" className="tr-btn">
-                  Lets talk!
+                  Contact Me
                 </a>
               </div>
             </div>
