@@ -16,13 +16,18 @@ interface Icon {
 interface IconCloudProps {
   icons?: React.ReactNode[];
   images?: string[];
+  color?: string;
 }
 
 function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
-export function IconCloud({ icons, images }: IconCloudProps) {
+export function IconCloud({
+  icons,
+  images,
+  color = "#4444FF",
+}: IconCloudProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [iconPositions, setIconPositions] = useState<Icon[]>([]);
   const [rotation] = useState({ x: 0, y: 0 });
@@ -52,8 +57,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
     const newIconCanvases = items.map((item, index) => {
       const offscreen = document.createElement("canvas");
-      offscreen.width = 32; // Adjust Icon size to 40
-      offscreen.height = 32; // Adjust Icon size to 40
+      offscreen.width = 32; // Adjust Icon size to 32
+      offscreen.height = 32; // Adjust Icon size to 32
       const offCtx = offscreen.getContext("2d");
 
       if (offCtx) {
@@ -87,12 +92,23 @@ export function IconCloud({ icons, images }: IconCloudProps) {
             offCtx.quadraticCurveTo(0, 0, borderRadius, 0);
             // Adjust this value to control border radius size
 
-            offCtx.arc(16, 16, 16, 0, Math.PI * 2); // Adjust Icon size to 20
+            offCtx.arc(16, 16, 16, 0, Math.PI * 2); // Adjust Icon size to 16
             offCtx.closePath();
             offCtx.clip();
 
             // Draw the image
-            offCtx.drawImage(img, 0, 0, 32, 32); // Adjust Icon size to 40
+            offCtx.drawImage(img, 0, 0, 32, 32); // Adjust Icon size to 32
+
+            // Add this code to apply the color
+            if (color) {
+              offCtx.globalCompositeOperation = "source-atop";
+              offCtx.fillStyle = color;
+              offCtx.fillRect(0, 0, 32, 32);
+
+              // Restore original alpha (keeps transparency but changes color)
+              offCtx.globalCompositeOperation = "destination-in";
+              offCtx.drawImage(img, 0, 0, 32, 32);
+            }
 
             imagesLoadedRef.current[index] = true;
           };
@@ -144,7 +160,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       });
     }
     setIconPositions(newIcons);
-  }, [icons, images]);
+  }, [icons, images, color]);
 
   // Handle mouse events
   const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -300,7 +316,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
             iconCanvasesRef.current[index] &&
             imagesLoadedRef.current[index]
           ) {
-            ctx.drawImage(iconCanvasesRef.current[index], -16, -16, 32, 32); // Adjust Icon size to 20 & 40
+            ctx.drawImage(iconCanvasesRef.current[index], -16, -16, 32, 32); // Adjust Icon size to 16 & 32
           }
         } else {
           // Show numbered circles if no icons/images are provided
@@ -319,8 +335,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
           ctx.closePath();
           // Adjust this value to control border radius size
 
-          ctx.arc(0, 0, 16, 0, Math.PI * 2); // Adjust Icon size to 20
-          ctx.fillStyle = "#4444ff";
+          ctx.arc(0, 0, 16, 0, Math.PI * 2); // Adjust Icon size to 16
+          ctx.fillStyle = color;
           ctx.fill();
           ctx.fillStyle = "white";
           ctx.textAlign = "center";
@@ -341,7 +357,15 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [icons, images, iconPositions, isDragging, mousePos, targetRotation]);
+  }, [
+    icons,
+    images,
+    iconPositions,
+    isDragging,
+    mousePos,
+    targetRotation,
+    color,
+  ]);
 
   return (
     <canvas
@@ -359,5 +383,6 @@ export function IconCloud({ icons, images }: IconCloudProps) {
   );
 }
 
-// Line: 55, 56, 90, 95, 303, 322 - Icon Size
-// Line: 222, 223, 249 - Speed Control
+// Line: 60, 61, 95, 100, 319, 338 - Icon Size
+// Line: 239, 240, 266 - Speed Control
+// Line: 19 29 103-111 163 339 367 - Icon Color

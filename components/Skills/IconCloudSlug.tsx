@@ -1,4 +1,5 @@
 import { IconCloud } from "@/components/ui/icon-cloud";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const slugs = [
   "typescript",
@@ -42,13 +43,14 @@ const slugs = [
 ];
 
 export default function IconCloudSlug() {
+  const { colors } = useTheme();
   const images = slugs.map(
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
   );
 
   return (
     <div className="relative flex size-full items-center justify-center overflow-hidden">
-      <IconCloud images={images} />
+      <IconCloud images={images} color={colors.iconCloud} />
     </div>
   );
 }
