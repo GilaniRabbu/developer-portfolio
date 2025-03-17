@@ -3,6 +3,7 @@
 import React from "react";
 import AnimatedWord from "@/components/Motion/AnimatedWord";
 import IconCloudSlug from "@/components/Skills/IconCloudSlug";
+import SkillStat from "@/components/Skills/SkillStat";
 
 export default function Skills() {
   return (
@@ -13,6 +14,7 @@ export default function Skills() {
       />
       <div className="container mx-auto mt-20 px-4">
         <IconCloudSlug />
+        <SkillStat />
       </div>
     </section>
   );

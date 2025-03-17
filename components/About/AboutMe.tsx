@@ -6,7 +6,7 @@ export default function AboutMe() {
     <section className="py-32 px-4 md:px-10 lg:px-16">
       <div className="container mx-auto text-center">
         <h2 className="text-6xl font-bold mb-6">About Me</h2>
-        <p className="mb-8 text-2xl text-justify leading-[48px]">
+        <p className="mb-8 text-2xl text-center text-balance leading-[48px]">
           👋 Hello! My name is{" "}
           <WaveUnderline
             waveHeight={8}

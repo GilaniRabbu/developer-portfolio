@@ -72,7 +72,7 @@ export default function Header() {
   return (
     <header
       className={`header-area header-3 header-absolute ${
-        isScrolled ? "bg-header shadow-md" : "bg-transparent"
+        isScrolled ? "bg-header shadow-md backdrop-blur" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto">
