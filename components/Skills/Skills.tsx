@@ -10,9 +10,9 @@ export default function Skills() {
     <section className="min-h-screen py-20">
       <AnimatedWord
         text="SkillsOfMine"
-        className="text-center mb-20 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
+        className="text-center mb-5 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
       />
-      <div className="container mx-auto mt-20 px-4">
+      <div className="container mx-auto px-4">
         <IconCloudSlug />
         <SkillStat />
       </div>

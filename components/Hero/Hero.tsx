@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import "./Hero.css";
@@ -48,7 +47,11 @@ export default function Hero() {
                 building dynamic and scalable web applications.
               </p>
               <div className="flex flex-wrap items-center gap-3 mt-8">
-                <a href="#" className="tr-btn">
+                <a
+                  className="tr-btn"
+                  href="/GilaniRabbu_Mern_Stack_Developer.pdf"
+                  download="GilaniRabbu_Mern_Stack_Developer.pdf"
+                >
                   Download CV
                 </a>
                 <a href="#" className="tr-btn">
