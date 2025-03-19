@@ -38,12 +38,12 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Portfolios", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Profile", href: "#profile" },
+    { name: "Skill", href: "#skill" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const socialLinks = [

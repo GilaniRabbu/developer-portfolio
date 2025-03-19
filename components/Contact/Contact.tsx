@@ -3,7 +3,7 @@ import AnimatedWord from "@/components/Motion/AnimatedWord";
 
 export default function Contact() {
   return (
-    <section className="min-h-screen py-20 px-4">
+    <section className="min-h-screen py-20 px-4" id="contact">
       <div className="container mx-auto">
         <AnimatedWord
           text="ContactMe"

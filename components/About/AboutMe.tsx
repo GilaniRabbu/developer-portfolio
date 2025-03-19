@@ -1,11 +1,15 @@
+import AnimatedWord from "@/components/Motion/AnimatedWord";
 import InteractiveHoverButtons from "./HoverButton";
 import { WaveUnderline } from "@/components/ui/wave-underline";
 
 export default function AboutMe() {
   return (
-    <section className="py-32 px-4 md:px-10 lg:px-16">
+    <section className="min-h-screen py-32 px-4 md:px-10 lg:px-16" id="about">
+      <AnimatedWord
+        text="AboutMe"
+        className="text-center mb-12 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
+      />
       <div className="container mx-auto text-center">
-        <h2 className="text-6xl font-bold mb-6">About Me</h2>
         <p className="mb-8 text-2xl text-center text-balance leading-[48px]">
           👋 Hello! My name is{" "}
           <WaveUnderline

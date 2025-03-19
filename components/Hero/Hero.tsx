@@ -6,7 +6,7 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <section
-      id="intro"
+      id="home"
       className="hero-section style-3 pt-40 px-4 pb-16 md:pt-48 md:pb-20 flex items-center"
     >
       <div className="container mx-auto">

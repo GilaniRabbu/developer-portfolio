@@ -74,6 +74,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #8750F7 #C9BFDD;
 }

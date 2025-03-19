@@ -34,7 +34,7 @@ export default function Timeline() {
   const [activeTab, setActiveTab] = useState("education");
 
   return (
-    <section className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen py-20 px-4 sm:px-6 lg:px-8" id="profile">
       <div className="container mx-auto">
         <AnimatedWord
           text="My Profile"

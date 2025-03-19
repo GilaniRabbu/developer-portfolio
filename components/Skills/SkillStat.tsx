@@ -6,41 +6,36 @@ export default function SkillStat() {
     {
       name: "TypeScript",
       icon: "/skill/ts.svg",
-      percentage: 55,
     },
     {
       name: "Next.js",
       icon: "/skill/next.svg",
-      percentage: 65,
     },
     {
       name: "React.js",
       icon: "/skill/react.svg",
-      percentage: 70,
     },
     {
       name: "JavaScript",
       icon: "/skill/js.svg",
-      percentage: 75,
     },
     {
       name: "Node.js",
       icon: "/skill/node.svg",
-      percentage: 60,
     },
     {
       name: "MongoDB",
       icon: "/skill/mongodb.svg",
-      percentage: 45,
     },
   ];
   return (
     <div>
       <p className="text-center text-balance text-2xl">
-        Discover my arsenal of frontend tools & technologies — TypeScript,
-        React, Redux, Next.js & more. From UI libraries like Material UI &
-        shadcn/ui to custom animations using GSAP & Framer Motion, I deliver
-        stunning user experiences.
+        Discover my arsenal of full stack tools & technologies — TypeScript,
+        React, Redux, Next.js, Node.js, Express.js, MongoDB & more. From
+        crafting dynamic UIs with Material UI & shadcn/ui to building robust
+        server-side logic and seamless data flow, I deliver exceptional user
+        experiences.
       </p>
       <div className="flex flex-wrap justify-center items-center gap-5 mt-14">
         {skills.map((skill) => (
@@ -55,9 +50,8 @@ export default function SkillStat() {
                   className="object-cover"
                 />
               </div>
-              <div className="text-xl font-bold mt-5">{skill.percentage}%</div>
+              <div className="text-xl font-bold mt-5">{skill.name}</div>
             </div>
-            <p className="text-lg font-medium mt-3">{skill.name}</p>
           </div>
         ))}
       </div>

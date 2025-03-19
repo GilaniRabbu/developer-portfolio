@@ -7,7 +7,7 @@ import SkillStat from "@/components/Skills/SkillStat";
 
 export default function Skills() {
   return (
-    <section className="min-h-screen py-20">
+    <section className="min-h-screen py-20" id="skill">
       <AnimatedWord
         text="SkillsOfMine"
         className="text-center mb-5 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"

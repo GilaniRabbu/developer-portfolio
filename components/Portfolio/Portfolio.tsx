@@ -4,7 +4,7 @@ import PortfolioCard from "@/components/Portfolio/PortfolioCard";
 
 const ProjectShowcase: React.FC = () => {
   return (
-    <div className="min-h-screen py-10 px-4">
+    <div className="min-h-screen py-10 px-4" id="portfolio">
       <div className="container mx-auto">
         <AnimatedWord
           text="MyProjects"
