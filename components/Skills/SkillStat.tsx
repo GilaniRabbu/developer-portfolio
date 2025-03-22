@@ -40,7 +40,7 @@ export default function SkillStat() {
       <div className="flex flex-wrap justify-center items-center gap-5 mt-14">
         {skills.map((skill) => (
           <div key={skill.name} className="flex flex-col items-center">
-            <div className="w-full aspect-square p-12 rounded-lg bg-[#659477] dark:bg-[#2D2726] flex flex-col items-center justify-center">
+            <div className="w-40 aspect-square p-5 rounded-lg bg-[#659477] dark:bg-[#2D2726] flex flex-col items-center justify-center">
               <div>
                 <Image
                   alt={skill.name}

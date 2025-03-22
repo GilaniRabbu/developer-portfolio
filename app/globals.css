@@ -101,3 +101,7 @@ body {
 .bg-accordion {
   background: var(--tr-accordion-bg);
 }
+
+.tr-name {
+  font-weight: 700;
+}
