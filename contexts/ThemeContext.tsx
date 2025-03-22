@@ -10,11 +10,11 @@ interface ThemeColors {
 }
 
 const lightColors: ThemeColors = {
-  iconCloud: "#659477",
+  iconCloud: "#537961",
 };
 
 const darkColors: ThemeColors = {
-  iconCloud: "#377E86",
+  iconCloud: "#4AAAB5",
 };
 
 type ThemeContextType = {

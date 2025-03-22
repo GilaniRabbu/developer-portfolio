@@ -126,7 +126,7 @@ export default function Header() {
             </div>
 
             <div
-              className={`header-menu px-4 py-8 lg:hidden ${
+              className={`header-menu px-4 py-8 lg:hidden backdrop-blur-md ${
                 menuOpen ? "menu-open" : ""
               } ${closing ? "menu-closing" : ""}`}
             >

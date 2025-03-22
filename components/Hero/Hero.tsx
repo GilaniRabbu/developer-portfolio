@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
+import { WordRotate } from "@/components/ui/word-rotate";
+import { SparklesText } from "@/components/ui/sparkles-text";
 import "./Hero.css";
 
 export default function Hero() {
@@ -23,26 +24,28 @@ export default function Hero() {
           </div>
           <div className="md:w-7/12">
             <div>
-              <span className="block mb-3 font-bold text-2xl md:text-3xl">
-                Hi, I am Gilani
-              </span>
-              <h1 className="mb-6 text-3xl md:text-4xl lg:text-5xl text-[#23412F] md:text-[#F59C5C] dark:text-[#F7B687]">
-                <TypeAnimation
-                  sequence={["WEB DEV.", 2000, "MERN DEV.", 2000]}
-                  wrapper="span"
-                  speed={50}
-                  style={{ display: "inline-block" }}
-                  repeat={Infinity}
+              <div className="flex gap-2 flex-wrap mb-3 font-bold text-3xl">
+                Hi, <SparklesText text="I am Gilani" />
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl inline-block md:text-[#F59C5C] dark:text-[#F7B687]">
+                <WordRotate
+                  className="font-bold"
+                  words={[
+                    "WEB DEV.",
+                    "MERN DEV.",
+                    "Frontend DEV.",
+                    "Backend DEV.",
+                  ]}
                 />
               </h1>
-              <div className="md:hidden text-center mb-4">
+              <div className="md:hidden text-center mt-3">
                 <img
                   src="/profile.png"
                   alt="Admin Image"
-                  className="mx-auto rounded-3xl w-full md:max-w-[400px] sm:max-w-80 max-w-[256px]"
+                  className="mx-auto rounded-md w-full md:max-w-[400px] sm:max-w-80 max-w-[256px]"
                 />
               </div>
-              <p className="text-lg md:text-xl w-full max-w-xl">
+              <p className="text-lg md:text-xl w-full max-w-xl mt-3">
                 I am a proficient MERN stack developer with expertise in
                 building dynamic and scalable web applications.
               </p>
