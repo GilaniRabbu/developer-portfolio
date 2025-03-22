@@ -72,7 +72,7 @@
 }
 
 .nav-icon:hover {
-  color: var(--tr-nav-bg);
+  color: var(--tr-nav-text-hover);
   border: none;
 }
 

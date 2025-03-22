@@ -22,6 +22,7 @@
 
   --tr-nav-bg: hsl(0, 0%, 100%, 0.5);
   --tr-nav-text: #050709;
+  --tr-nav-text-hover: #FFFFFF;
   --tr-nav-mobile-bg: hsl(0, 2%, 80%, 0.5);
   --tr-nav-mobile-text: #050709;
   --tr-nav-hamburger: #292424;
@@ -39,6 +40,7 @@
 
   --tr-nav-bg: hsl(210, 29%, 3%, 0.5);
   --tr-nav-text: #FFFFFF;
+  --tr-nav-text-hover: #05080A;
   --tr-nav-mobile-bg: hsl(10, 7%, 20%, 0.5);
   --tr-nav-mobile-text: #FFFFFF;
   --tr-nav-hamburger: #CBC9C9;
