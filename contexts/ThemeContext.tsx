@@ -10,7 +10,7 @@ interface ThemeColors {
 }
 
 const lightColors: ThemeColors = {
-  iconCloud: "#537961",
+  iconCloud: "#21C45D", // #537961
 };
 
 const darkColors: ThemeColors = {
