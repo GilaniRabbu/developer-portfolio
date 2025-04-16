@@ -47,7 +47,7 @@ export default function PortfolioCard() {
     <div className="flex flex-wrap justify-center gap-10">
       {cardData.map((card) => (
         <CardContainer key={card.id} className="inter-var">
-          <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#2D2726] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+          <CardBody className="relative w-auto h-auto rounded-xl p-6 border sm:w-[30rem] group/card bg-white/50 border-black/[0.1] dark:bg-[#2D2726] dark:border-white/[0.2] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]">
             <CardItem
               translateZ="50"
               className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -57,7 +57,7 @@ export default function PortfolioCard() {
             <CardItem
               as="p"
               translateZ="60"
-              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              className="text-sm max-w-sm mt-2 text-neutral-500 dark:text-neutral-300"
             >
               {card.description}
             </CardItem>
@@ -97,7 +97,7 @@ export default function PortfolioCard() {
                 as={Link}
                 href={card.github}
                 target="__blank"
-                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                className="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white"
               >
                 Github
               </CardItem>

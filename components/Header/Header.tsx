@@ -72,7 +72,7 @@ export default function Header() {
   return (
     <header
       className={`header-area header-3 header-absolute ${
-        isScrolled ? "bg-header shadow-md backdrop-blur" : "bg-transparent"
+        isScrolled ? "bg-header shadow-md backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto">
@@ -126,7 +126,7 @@ export default function Header() {
             </div>
 
             <div
-              className={`header-menu px-4 py-8 lg:hidden backdrop-blur-md ${
+              className={`header-menu px-4 py-8 lg:hidden backdrop-blur-lg ${
                 menuOpen ? "menu-open" : ""
               } ${closing ? "menu-closing" : ""}`}
             >
