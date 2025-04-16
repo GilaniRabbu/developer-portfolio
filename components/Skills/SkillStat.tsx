@@ -30,7 +30,7 @@ export default function SkillStat() {
   ];
   return (
     <div>
-      <p className="text-center text-balance text-2xl">
+      <p className="text-pretty text-left md:text-balance md:text-center text-2xl">
         Discover my arsenal of full stack tools & technologies — TypeScript,
         React, Redux, Next.js, Node.js, Express.js, MongoDB & more. From
         crafting dynamic UIs with Material UI & shadcn/ui to building robust

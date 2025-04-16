@@ -10,7 +10,7 @@ export default function AboutMe() {
         className="text-center mb-12 text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
       />
       <div className="text-center">
-        <p className="mb-8 text-2xl text-center text-balance leading-[48px]">
+        <p className="mb-8 text-2xl leading-[48px] text-pretty text-left md:text-balance md:text-center">
           👋 Hello! My name is{" "}
           <span className="tr-name">Md. Toufiq Gilani Rabbu</span>, a Full Stack
           Website Developer with expertise in building dynamic, functional,
