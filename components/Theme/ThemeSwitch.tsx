@@ -24,8 +24,8 @@ const ThemeSwitch = () => {
       <div className="relative">
         <div
           className={`
-            flex items-center bg-gray-800/80 backdrop-blur-sm 
-            border border-gray-700/50 rounded-l-lg overflow-hidden
+            flex items-center bg-[#CBCBCB]/70 dark:bg-[#37312F]/70
+            backdrop-blur rounded-l-lg overflow-hidden
             transition-all duration-300 ease-in-out
             ${isOpen ? "w-[152px]" : "w-12"}
           `}
@@ -34,7 +34,7 @@ const ThemeSwitch = () => {
             onClick={togglePanel}
             className="flex items-center justify-center w-12 h-10 shrink-0 setting-btn"
           >
-            <IoSettings className="w-5 h-5 text-gray-300 rotating-icon" />
+            <IoSettings className="w-5 h-5 text-[#050709]/85 dark:text-[#EEF2FF] rotating-icon" />
           </button>
           <div
             className={`
@@ -50,18 +50,12 @@ const ThemeSwitch = () => {
               onClick={() => selectTheme("dark")}
               className={`
                 flex items-center justify-center w-10 h-10 rounded-md
-                border border-gray-700/50 
-                transition-all duration-200 ease-in-out
-                ${
-                  theme === "dark"
-                    ? "bg-gray-700/50"
-                    : "bg-gray-800/50 hover:bg-gray-700/30"
-                }
+                ${theme === "dark" ? "bg-[#453E3B]" : "bg-[#BFBFBF]"}
               `}
             >
               <IoMoon
-                className={`w-4 h-4 transition-colors duration-200 ${
-                  theme === "dark" ? "text-white" : "text-gray-400"
+                className={`w-4 h-4 ${
+                  theme === "dark" ? "text-[#EEF2FF]" : "text-[#1C1917]"
                 }`}
               />
             </button>
@@ -69,18 +63,12 @@ const ThemeSwitch = () => {
               onClick={() => selectTheme("light")}
               className={`
                 flex items-center justify-center w-10 h-10 rounded-md
-                border border-gray-700/50 
-                transition-all duration-200 ease-in-out
-                ${
-                  theme === "light"
-                    ? "bg-gray-700/50"
-                    : "bg-gray-800/50 hover:bg-gray-700/30"
-                }
+                ${theme === "light" ? "bg-[#E6E6E6]" : "bg-[#292523]"}
               `}
             >
               <IoSunnyOutline
-                className={`w-4 h-4 transition-colors duration-200 ${
-                  theme === "light" ? "text-white" : "text-gray-400"
+                className={`w-4 h-4 ${
+                  theme === "light" ? "text-[#050709]" : "text-[#EEF2FF]"
                 }`}
               />
             </button>
