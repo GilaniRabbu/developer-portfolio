@@ -8,7 +8,7 @@ const cardData = [
     id: 1,
     title: "FurStore E-Commerce",
     description: "Fully Responsive E-Commerce site built with MERN stack.",
-    image: "./portfolio_1.png",
+    image: "./portfolio_1.jpg",
     tech: ["Typescript", "Next.js", "Tailwind"],
     link: "https://ecommerce-fur-store.vercel.app/",
     github: "https://github.com/GilaniRabbu/ecommerce-website.git",
@@ -17,7 +17,7 @@ const cardData = [
     id: 2,
     title: "GitHub Users Finder App",
     description: "Fetches and displays user profile data dynamically.",
-    image: "./portfolio_2.png",
+    image: "./portfolio_2.jpg",
     tech: ["Typescript", "Next.js", "Tailwind", "Api"],
     link: "https://github-user-search-app-v3.vercel.app/",
     github: "https://github.com/GilaniRabbu/github-user-search-app.git",
@@ -26,7 +26,7 @@ const cardData = [
     id: 3,
     title: "AI Landing Page",
     description: "Responsive landing page added dynamic animations.",
-    image: "./portfolio_2.png",
+    image: "./portfolio_3.jpg",
     tech: ["Next.js", "Tailwind", "framer-motion"],
     link: "https://ai-landing-v1.vercel.app/",
     github: "https://github.com/GilaniRabbu/ai-landing-page.git",
@@ -35,10 +35,19 @@ const cardData = [
     id: 4,
     title: "Rest Countries Api",
     description: "See all countries from the API on the homepage.",
-    image: "./portfolio_3.png",
+    image: "./portfolio_4.jpg",
     tech: ["React", "Vite", "Api"],
     link: "https://rest-countries-api-solution-v2.vercel.app/",
     github: "https://github.com/GilaniRabbu/rest-countries-api-solution.git",
+  },
+  {
+    id: 5,
+    title: "Blue Wave AC Service",
+    description: "Keeping you cool with expert AC services.",
+    image: "./portfolio_5.jpg",
+    tech: ["React", "Next.js", "Tailwind"],
+    link: "https://blue-wave-ac-service-v2.vercel.app/",
+    github: "https://github.com/GilaniRabbu/blue-wave-ac-service.git",
   },
 ];
 
@@ -66,7 +75,7 @@ export default function PortfolioCard() {
                 src={card.image || "/placeholder.svg"}
                 height={1000}
                 width={1000}
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt={`${card.title} thumbnail`}
               />
             </CardItem>
