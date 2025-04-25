@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Cormorant_Garamond, Libre_Baskerville } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import "./globals.css";
 
-const open_sans = Open_Sans({ subsets: ["latin"], weight: "500" });
+const libre_baskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const cormorant_garamond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: "600",
+});
 
 export const metadata: Metadata = {
   title: "Portfolio Website",
@@ -22,7 +30,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className={`antialiased ${open_sans.className}`}>
+      <body className={`antialiased ${libre_baskerville.className}`}>
         <ThemeProvider>
           <Header />
           {children}

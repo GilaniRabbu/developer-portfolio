@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { WordRotate } from "@/components/ui/word-rotate";
 import "./Hero.css";
@@ -15,8 +16,10 @@ export default function Hero() {
             <p className="mb-1 text-xl text-[#377E86] dark:text-[#11EE55]">
               hi there, my name is
             </p>
-            <h2 className="text-5xl font-bold mb-3 uppercase text-[#377E86] dark:text-[#11EE55]">
-              Md Toufiq Gilani Rabbu
+            <h2 className="text-6xl md:text-5xl font-bold mb-3 uppercase text-[#377E86] dark:text-[#11EE55]">
+              Md <br className="md:hidden" /> Toufiq
+              <br className="md:hidden" /> Gilani
+              <br className="md:hidden" /> Rabbu
             </h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl inline-block text-[#F59C5C] dark:text-[#F7B687]">
               <WordRotate
