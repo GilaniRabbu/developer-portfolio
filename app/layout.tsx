@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Libre_Baskerville } from "next/font/google";
+import { Libre_Baskerville } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/contexts/ThemeContext";
@@ -10,10 +10,10 @@ const libre_baskerville = Libre_Baskerville({
   weight: "400",
 });
 
-const cormorant_garamond = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: "600",
-});
+// const cormorant_garamond = Cormorant_Garamond({
+//   subsets: ["latin"],
+//   weight: "600",
+// });
 
 export const metadata: Metadata = {
   title: "Portfolio Website",
