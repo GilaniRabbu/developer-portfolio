@@ -75,7 +75,7 @@ export default function PortfolioCard() {
                 src={card.image || "/placeholder.svg"}
                 height={1000}
                 width={1000}
-                className="w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="w-full object-cover group-hover/card:shadow-xl"
                 alt={`${card.title} thumbnail`}
               />
             </CardItem>
