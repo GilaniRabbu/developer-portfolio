@@ -40,15 +40,6 @@ const cardData = [
     link: "https://rest-countries-api-solution-v2.vercel.app/",
     github: "https://github.com/GilaniRabbu/rest-countries-api-solution.git",
   },
-  {
-    id: 5,
-    title: "Blue Wave AC Service",
-    description: "Keeping you cool with expert AC services.",
-    image: "./portfolio_5.jpg",
-    tech: ["React", "Next.js", "Tailwind"],
-    link: "https://blue-wave-ac-service-v2.vercel.app/",
-    github: "https://github.com/GilaniRabbu/blue-wave-ac-service.git",
-  },
 ];
 
 export default function PortfolioCard() {
