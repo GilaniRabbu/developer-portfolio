@@ -6,6 +6,17 @@ import Link from "next/link";
 const cardData = [
   {
     id: 1,
+    title: "FoodieBite",
+    description:
+      "Developed a Full-Stack Restaurant Booking application using the MERN stack.",
+    image: "./portfolio_1.jpg",
+    tech: ["Typescript", "Next.js", "Tailwind"],
+    link: "https://restaurant-booking-client-three.vercel.app/",
+    github: "https://github.com/GilaniRabbu/restaurant-booking-client.git",
+    server: "https://github.com/GilaniRabbu/restaurant-booking-server.git",
+  },
+  {
+    id: 2,
     title: "FurStore E-Commerce",
     description: "Fully Responsive E-Commerce site built with MERN stack.",
     image: "./portfolio_1.jpg",
@@ -14,7 +25,7 @@ const cardData = [
     github: "https://github.com/GilaniRabbu/ecommerce-website.git",
   },
   {
-    id: 2,
+    id: 3,
     title: "GitHub Users Finder App",
     description: "Fetches and displays user profile data dynamically.",
     image: "./portfolio_2.jpg",
@@ -23,7 +34,7 @@ const cardData = [
     github: "https://github.com/GilaniRabbu/github-user-search-app.git",
   },
   {
-    id: 3,
+    id: 4,
     title: "AI Landing Page",
     description: "Responsive landing page added dynamic animations.",
     image: "./portfolio_3.jpg",
@@ -32,7 +43,7 @@ const cardData = [
     github: "https://github.com/GilaniRabbu/ai-landing-page.git",
   },
   {
-    id: 4,
+    id: 5,
     title: "Rest Countries Api",
     description: "See all countries from the API on the homepage.",
     image: "./portfolio_4.jpg",
@@ -99,7 +110,16 @@ export default function PortfolioCard() {
                 target="__blank"
                 className="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white"
               >
-                Github
+                Client
+              </CardItem>
+              <CardItem
+                translateZ={20}
+                as={Link}
+                href={card.github}
+                target="__blank"
+                className="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white"
+              >
+                Server
               </CardItem>
             </div>
           </CardBody>
