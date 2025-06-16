@@ -10,7 +10,15 @@ const cardData = [
     description:
       "Developed a Full-Stack Restaurant Booking application using the MERN stack.",
     image: "./portfolio_1.jpg",
-    tech: ["Typescript", "Next.js", "Tailwind"],
+    tech: [
+      "Typescript",
+      "Next.js",
+      "Tailwind",
+      "Redux",
+      "Express.js",
+      "Mongoose",
+      "MongoDB",
+    ],
     link: "https://restaurant-booking-client-three.vercel.app/",
     github: "https://github.com/GilaniRabbu/restaurant-booking-client.git",
     server: "https://github.com/GilaniRabbu/restaurant-booking-server.git",
@@ -103,24 +111,26 @@ export default function PortfolioCard() {
               >
                 Visit →
               </CardItem>
-              <CardItem
-                translateZ={20}
-                as={Link}
-                href={card.github}
-                target="__blank"
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white"
-              >
-                Client
-              </CardItem>
-              <CardItem
-                translateZ={20}
-                as={Link}
-                href={card.github}
-                target="__blank"
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white"
-              >
-                Server
-              </CardItem>
+              <div className="flex gap-5">
+                <CardItem
+                  translateZ={20}
+                  as={Link}
+                  href={card.github}
+                  target="__blank"
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white"
+                >
+                  Client
+                </CardItem>
+                <CardItem
+                  translateZ={20}
+                  as={Link}
+                  href={card.github}
+                  target="__blank"
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white"
+                >
+                  Server
+                </CardItem>
+              </div>
             </div>
           </CardBody>
         </CardContainer>
