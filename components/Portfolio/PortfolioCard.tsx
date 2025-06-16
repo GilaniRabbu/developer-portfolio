@@ -1,5 +1,4 @@
 "use client";
-
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Link from "next/link";
 
@@ -10,15 +9,8 @@ const cardData = [
     description:
       "Developed a Full-Stack Restaurant Booking application using the MERN stack.",
     image: "./portfolio_1.jpg",
-    tech: [
-      "Typescript",
-      "Next.js",
-      "Tailwind",
-      "Redux",
-      "Express.js",
-      "Mongoose",
-      "MongoDB",
-    ],
+    frontend: ["Typescript", "Next.js", "Tailwind", "Redux"],
+    backend: ["Express.js", "Mongoose", "MongoDB"],
     link: "https://restaurant-booking-client-three.vercel.app/",
     github: "https://github.com/GilaniRabbu/restaurant-booking-client.git",
     server: "https://github.com/GilaniRabbu/restaurant-booking-server.git",
@@ -28,7 +20,8 @@ const cardData = [
     title: "FurStore E-Commerce",
     description: "Fully Responsive E-Commerce site built with MERN stack.",
     image: "./portfolio_2.jpg",
-    tech: ["Typescript", "Next.js", "Tailwind"],
+    frontend: ["Typescript", "Next.js", "Tailwind"],
+    backend: ["Swiper.js"],
     link: "https://ecommerce-fur-store.vercel.app/",
     github: "https://github.com/GilaniRabbu/ecommerce-website.git",
   },
@@ -37,7 +30,8 @@ const cardData = [
     title: "GitHub Users Finder App",
     description: "Fetches and displays user profile data dynamically.",
     image: "./portfolio_3.jpg",
-    tech: ["Typescript", "Next.js", "Tailwind", "Api"],
+    frontend: ["Typescript", "Next.js", "Tailwind"],
+    backend: ["Api"],
     link: "https://github-user-search-app-v3.vercel.app/",
     github: "https://github.com/GilaniRabbu/github-user-search-app.git",
   },
@@ -46,7 +40,8 @@ const cardData = [
     title: "AI Landing Page",
     description: "Responsive landing page added dynamic animations.",
     image: "./portfolio_4.jpg",
-    tech: ["Next.js", "Tailwind", "framer-motion"],
+    frontend: ["Next.js", "Tailwind"],
+    backend: ["framer-motion"],
     link: "https://ai-landing-v1.vercel.app/",
     github: "https://github.com/GilaniRabbu/ai-landing-page.git",
   },
@@ -55,7 +50,8 @@ const cardData = [
     title: "Rest Countries Api",
     description: "See all countries from the API on the homepage.",
     image: "./portfolio_5.jpg",
-    tech: ["React", "Vite", "Api"],
+    frontend: ["React", "Vite"],
+    backend: ["Api"],
     link: "https://rest-countries-api-solution-v2.vercel.app/",
     github: "https://github.com/GilaniRabbu/rest-countries-api-solution.git",
   },
@@ -76,7 +72,7 @@ export default function PortfolioCard() {
             <CardItem
               as="p"
               translateZ="60"
-              className="text-sm max-w-sm mt-2 text-neutral-500 dark:text-neutral-300"
+              className="text-sm max-w-sm mt-2 line-clamp-1 text-neutral-500 dark:text-neutral-300"
             >
               {card.description}
             </CardItem>
@@ -91,7 +87,19 @@ export default function PortfolioCard() {
             </CardItem>
             <CardItem translateZ="80" className="w-full mt-5">
               <div className="flex flex-wrap gap-2">
-                {card.tech.map((category, index) => (
+                {card.frontend.map((category, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 text-xs font-medium rounded-full bg-black/5 dark:bg-white/10 text-neutral-700 dark:text-neutral-200"
+                  >
+                    {category}
+                  </span>
+                ))}
+              </div>
+            </CardItem>
+            <CardItem translateZ="80" className="w-full mt-5">
+              <div className="flex flex-wrap gap-2">
+                {card.backend.map((category, index) => (
                   <span
                     key={index}
                     className="px-3 py-1 text-xs font-medium rounded-full bg-black/5 dark:bg-white/10 text-neutral-700 dark:text-neutral-200"
