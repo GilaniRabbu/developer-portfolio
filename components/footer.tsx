@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-card border-t border-border py-12">
@@ -17,19 +17,22 @@ export default function Footer() {
         >
           <div className="flex justify-center gap-8">
             <a
-              href="#"
+              href="https://github.com/GilaniRabbu"
+              target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
             >
               GitHub
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/toufiq-gilani-rabbu"
+              target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
             >
               LinkedIn
             </a>
             <a
-              href="#"
+              href="https://x.com/GilaniRabbu"
+              target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
             >
               Twitter
@@ -37,15 +40,15 @@ export default function Footer() {
           </div>
 
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Full Stack Developer. All rights reserved.
+            © {currentYear} Gilani Rabbu. All rights reserved.
           </p>
 
           <p className="text-muted-foreground text-xs">
-            Designed & Built with{' '}
-            <span className="text-accent">React</span> & <span className="text-accent">Next.js</span>
+            Designed & Built with <span className="text-accent">React</span> &{" "}
+            <span className="text-accent">Next.js</span>
           </p>
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }

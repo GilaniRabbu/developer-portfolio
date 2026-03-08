@@ -1,37 +1,37 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Menu, X, Moon, Sun } from 'lucide-react'
-import { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
+import { motion } from "framer-motion";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  // { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
+];
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <motion.a
-          href="#"
+          href="/"
           className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           whileHover={{ scale: 1.05 }}
         >
-          Dev
+          GILANI.IO
         </motion.a>
 
         {/* Desktop menu */}
@@ -50,13 +50,13 @@ export default function Navigation() {
           {/* Theme toggle */}
           {mounted && (
             <motion.button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="ml-2 p-2 rounded-lg hover:bg-primary/10 transition-colors"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="ml-2 p-2 rounded-lg hover:bg-primary/10 transition-colors cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
+              {theme === "dark" ? (
                 <Sun className="w-5 h-5 text-accent" />
               ) : (
                 <Moon className="w-5 h-5 text-primary" />
@@ -69,13 +69,13 @@ export default function Navigation() {
         <div className="md:hidden flex gap-2 items-center">
           {mounted && (
             <motion.button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-lg hover:bg-primary/10 transition-colors"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="p-2 rounded-lg hover:bg-primary/10 transition-colors cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
+              {theme === "dark" ? (
                 <Sun className="w-5 h-5 text-accent" />
               ) : (
                 <Moon className="w-5 h-5 text-primary" />
@@ -83,7 +83,7 @@ export default function Navigation() {
             </motion.button>
           )}
           <button
-            className="p-2"
+            className="p-2 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -95,9 +95,9 @@ export default function Navigation() {
       {/* Mobile menu */}
       <motion.div
         initial={false}
-        animate={isOpen ? 'open' : 'closed'}
+        animate={isOpen ? "open" : "closed"}
         variants={{
-          open: { height: 'auto', opacity: 1 },
+          open: { height: "auto", opacity: 1 },
           closed: { height: 0, opacity: 0 },
         }}
         transition={{ duration: 0.3 }}
@@ -117,5 +117,5 @@ export default function Navigation() {
         </div>
       </motion.div>
     </header>
-  )
+  );
 }

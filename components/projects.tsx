@@ -1,58 +1,78 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: "FoodieBite - Restaurant Booking System",
     description:
-      'A full-stack e-commerce platform with real-time inventory management, payment processing, and analytics dashboard.',
-    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
-    image: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      "A full-stack restaurant booking system with real-time availability, user authentication, and payment integration.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+    ],
+    image: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     links: {
-      github: '#',
-      live: '#',
+      github: "https://github.com/GilaniRabbu/foodiebite.git",
+      live: "https://foodiebite.vercel.app/",
     },
   },
   {
     id: 2,
-    title: 'Task Management App',
+    title: "Trainer Hub - Hire A Personal Trainer Platform",
     description:
-      'Collaborative task management application with real-time updates, team workspaces, and advanced filtering.',
-    tech: ['React', 'Firebase', 'Tailwind CSS', 'Framer Motion'],
-    image: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      "Fully responsive platform connecting clients with personal trainers, featuring booking management and payment integration.",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+    ],
+    image: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     links: {
-      github: '#',
-      live: '#',
+      github: "https://github.com/GilaniRabbu/trainer-hub-client.git",
+      live: "https://trainer-hub-client.vercel.app/",
     },
   },
   {
     id: 3,
-    title: 'AI Content Generator',
+    title: "Hypetown - E-commerce Platform (Frontend)",
     description:
-      'AI-powered content generation tool with multiple templates, batch processing, and content optimization.',
-    tech: ['Next.js', 'OpenAI', 'Supabase', 'Redis'],
-    image: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+      "Full-stack e-commerce platform with customer-facing website and admin dashboards for managing orders, products, customers, analytics, and statistics.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Framer Motion",
+    ],
+    image: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
     links: {
-      github: '#',
-      live: '#',
+      github: "#",
+      live: "https://hypetownbd.com/",
     },
   },
   {
     id: 4,
-    title: 'Analytics Dashboard',
+    title: "Loomwave - International Clothing Manufacturer",
     description:
-      'Real-time analytics dashboard with customizable charts, data export, and predictive insights.',
-    tech: ['Next.js', 'TypeScript', 'Recharts', 'Node.js'],
-    image: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+      "Frontend-focused company profile website showcasing Loomwave’s clothing manufacturing capabilities, services, and portfolio, with interactive UI and smooth animations.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    image: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
     links: {
-      github: '#',
-      live: '#',
+      github: "#",
+      live: "https://loomwaveintl.com",
     },
   },
-]
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,7 +82,7 @@ const containerVariants = {
       staggerChildren: 0.2,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -71,12 +91,12 @@ const itemVariants = {
     y: 0,
     transition: { duration: 0.8 },
   },
-}
+};
 
 const hoverVariants = {
   rest: { y: 0 },
   hover: { y: -10 },
-}
+};
 
 export default function Projects() {
   return (
@@ -85,11 +105,13 @@ export default function Projects() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: "-100px" }}
           className="mb-16"
         >
           <motion.div variants={itemVariants}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Featured Projects
+            </h2>
             <div className="w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
           </motion.div>
         </motion.div>
@@ -98,7 +120,7 @@ export default function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {projects.map((project) => (
@@ -149,6 +171,7 @@ export default function Projects() {
                   <div className="flex gap-4 pt-4 border-t border-border">
                     <motion.a
                       href={project.links.github}
+                      target="_blank"
                       className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                       whileHover={{ scale: 1.1 }}
                     >
@@ -157,6 +180,7 @@ export default function Projects() {
                     </motion.a>
                     <motion.a
                       href={project.links.live}
+                      target="_blank"
                       className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                       whileHover={{ scale: 1.1 }}
                     >
@@ -171,5 +195,5 @@ export default function Projects() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

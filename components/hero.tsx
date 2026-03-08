@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -12,7 +12,7 @@ const containerVariants = {
       delayChildren: 0.2,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -21,15 +21,15 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
-}
+};
 
 const buttonVariants = {
   rest: { scale: 1 },
   hover: { scale: 1.05 },
-}
+};
 
 const chevronVariants = {
   animate: {
@@ -37,16 +37,16 @@ const chevronVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
-}
+};
 
 export default function Hero() {
   const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects')
-    projectsSection?.scrollIntoView({ behavior: 'smooth' })
-  }
+    const projectsSection = document.getElementById("projects");
+    projectsSection?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-background">
@@ -61,7 +61,7 @@ export default function Hero() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
         />
         <motion.div
@@ -73,7 +73,7 @@ export default function Hero() {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
         />
       </div>
@@ -84,10 +84,9 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Main heading */}
         <motion.div variants={itemVariants} className="mb-6">
-          <p className="text-primary font-semibold text-sm sm:text-base tracking-widest uppercase mb-4">
-            Welcome to my portfolio
+          <p className="text-primary font-semibold text-sm sm:text-base tracking-widest uppercase mb-2">
+            {`<Md. Toufiq Gilani Rabbu/>`}
           </p>
         </motion.div>
 
@@ -95,7 +94,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-balance mb-6"
         >
-          Full Stack{' '}
+          Full Stack{" "}
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
             Developer
           </span>
@@ -105,8 +104,8 @@ export default function Hero() {
           variants={itemVariants}
           className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 text-balance leading-relaxed"
         >
-          Building scalable, high-performance web solutions with modern technologies and
-          thoughtful design.
+          Building scalable, high-performance web solutions with modern
+          technologies and thoughtful design.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -143,5 +142,5 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }
